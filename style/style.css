@@ -8,5 +8,89 @@
 
 body {
   width: 100%;
+  min-height: 100vh;
+  color: #222222;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+}
+
+.header nav {
+  padding: 0 8rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav .logo-container {
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header nav .logo-container .logo-img-container {
+  width: 4rem;
+  height: 4rem;
+}
+
+.header nav .logo-container .logo-img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header nav .logo-container .slogan-container {
+  margin-left: 1rem;
+}
+
+.header nav .logo-container .slogan-container p {
+  font-size: 1.5rem;
+}
+
+.header nav .burger-container {
+  width: 3rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.header nav .burger-container .line {
+  background: #222222;
+  width: 100%;
+  height: 20%;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
