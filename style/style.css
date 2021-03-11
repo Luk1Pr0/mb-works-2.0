@@ -107,4 +107,31 @@ body {
   display: flex;
   background: #222222;
 }
+
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  min-height: 10vh;
+  background: #3c3c3c;
+}
+
+footer .footer-content__container {
+  min-height: 10vh;
+  width: 100%;
+  padding: 0 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .footer-content__container .footer-content {
+  min-width: 50%;
+  border: 1px solid red;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
 /*# sourceMappingURL=style.css.map */
