@@ -12,6 +12,12 @@ body {
 	font-family: sans-serif;
 }
 
+a {
+	color: rgb(245, 245, 245);
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
 .header {
 	width: 100%;
 	min-height: 100vh;
@@ -69,6 +75,30 @@ body {
 				background: rgb(245, 245, 245);				;
 				width: 100%;
 				height: 20%;
+			}
+		}
+	}
+
+	ul {
+		background: rgba(40, 40, 40, 1);
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		li {
+			width: 100%;
+			height: 20%;
+			list-style-type: none;
+			border: 1px solid coral;
+
+			a {
+				border: 1px solid red;
+				width: 100%;
 			}
 		}
 	}
@@ -139,4 +169,8 @@ footer {
 			align-items: center;
 		}
 	}
+}
+
+.hidden {
+	display: none;
 }

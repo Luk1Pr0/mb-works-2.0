@@ -13,6 +13,12 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
 .header {
   width: 100%;
   min-height: 100vh;
@@ -93,6 +99,39 @@ body {
   background: whitesmoke;
   width: 100%;
   height: 20%;
+}
+
+.header ul {
+  background: #282828;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header ul li {
+  width: 100%;
+  height: 20%;
+  list-style-type: none;
+  border: 1px solid coral;
+}
+
+.header ul li a {
+  border: 1px solid red;
+  width: 100%;
 }
 
 .header .header-logo__container {
@@ -181,5 +220,9 @@ footer .footer-content__container .footer-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
