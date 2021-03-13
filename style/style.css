@@ -147,10 +147,25 @@ a {
 
 .header ul li a {
   color: #9b9b9b;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header ul li:hover a {
   color: whitesmoke;
+}
+
+.header .hidden {
+  display: none;
 }
 
 .header .header-logo__container {
@@ -239,9 +254,5 @@ footer .footer-content__container .footer-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.hidden {
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */

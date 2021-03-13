@@ -110,12 +110,21 @@ a {
 
 			a {
 				color: rgb(155, 155, 155);
+				height: 100%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 
 			&:hover a {
 				color: rgb(245, 245, 245);
 			}
 		}
+	}
+
+	.hidden {
+		display: none;
 	}
 
 	.header-logo__container {
@@ -187,5 +196,5 @@ footer {
 }
 
 .hidden {
-	display: none;
+	// display: none;
 }
