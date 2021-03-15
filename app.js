@@ -1,10 +1,14 @@
 const burgerBtn = document.getElementById('nav-button');
 const nav = document.getElementById('navigation');
 
-console.log(burgerBtn);
-
+// Toggle open/close nav
 const toggleNav = () => {
 	nav.classList.toggle('hidden');
+}
+
+// Close nav on link click
+const closeNav = () => {
+	nav.classList.add('hidden');
 }
 
 burgerBtn.addEventListener('click', toggleNav);
