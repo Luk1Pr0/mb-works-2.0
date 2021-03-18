@@ -9,7 +9,6 @@ const toggleNav = () => {
 // Close nav on link click
 const closeNav = () => {
 	nav.classList.add('hidden');
-	console.log('closed');
 }
 
 burgerBtn.addEventListener('click', toggleNav);
