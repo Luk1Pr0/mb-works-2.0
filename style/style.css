@@ -12,8 +12,8 @@ html {
 body {
   overflow-x: hidden;
   width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(4deg, #004b45 0%, #006f77 100%);
+  min-height: 200vh;
+  background: linear-gradient(4deg, #244b47 0%, #006f77 100%);
   color: #f0f0f0;
   font-family: sans-serif;
 }
@@ -39,6 +39,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
 }
 
 .nav-logo__container {
@@ -132,7 +133,7 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(4deg, #004b45 0%, #006f77 100%);
+  background: linear-gradient(4deg, #244b47 0%, #006f77 100%);
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   background: #131313;

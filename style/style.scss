@@ -1,5 +1,5 @@
 // Variables
-$primaryBackground: linear-gradient(4deg, rgb(0,75,69) 0%, rgb(0, 111, 119) 100%);
+$primaryBackground: linear-gradient(4deg, rgb(36, 75, 71) 0%, rgb(0, 111, 119) 100%);
 $secondaryBackground: rgb(19, 19, 19);
 $primaryColor: rgb(240, 240, 240);
 $secondaryColor: rgb(217, 255, 0);
@@ -32,7 +32,7 @@ html {
 body {
 	overflow-x: hidden;
 	width: 100%;
-	min-height: 100vh;
+	min-height: 200vh;
 	background: $primaryBackground;
 	color: $primaryColor;
 	font-family: $font;
@@ -48,7 +48,7 @@ a {
 	width: 100%;
 	height: 7rem;
 	@include flex(row, space-between);
-
+	position: fixed;
 }
 
 .nav-logo__container {
