@@ -141,4 +141,31 @@ nav ul li a {
 	border-radius: 100%;
 }
 
+.burger--cross {
+	.line:first-child {
+		transform: rotate(45deg) translate(0, 1.3rem);
+	}
+
+	.line:nth-child(2) {
+		opacity: 0;
+	}
+
+	&:hover .line:nth-child(2){
+		opacity: 1;
+	}
+
+	.line:last-child {
+		transform: rotate(-45deg) translate(0, -1.3rem);
+	}
+}
+
+// Scroll bar styling
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $secondaryBackground;
+}
+
 // Animations
