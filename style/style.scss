@@ -43,12 +43,22 @@ a {
 	text-decoration: none;
 }
 
+// Scroll bar styling
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $secondaryBackground;
+}
+
 // Navigation styling
 .nav {
 	width: 100%;
 	height: 7rem;
 	@include flex(row, space-between);
 	position: fixed;
+	z-index: 10;
 }
 
 .nav-logo__container {
@@ -95,6 +105,25 @@ a {
 	}
 }
 
+// Cross burger when nav is opened
+.burger--cross {
+	.line:first-child {
+		transform: rotate(45deg) translate(0, 1.3rem);
+	}
+
+	.line:nth-child(2) {
+		opacity: 0;
+	}
+
+	&:hover .line:nth-child(2){
+		opacity: 1;
+	}
+
+	.line:last-child {
+		transform: rotate(-45deg) translate(0, -1.3rem);
+	}
+}
+
 .line {
 	transition: $transitionShort;
 	background: $secondaryColor;
@@ -110,6 +139,7 @@ nav ul {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 9;
 	@include flex(column, center);
 	background: $primaryBackground;
 	transition: $transitionMedium;
@@ -143,30 +173,22 @@ nav ul li a {
 	border-radius: 100%;
 }
 
-// Cross burger when nav is opened
-.burger--cross {
-	.line:first-child {
-		transform: rotate(45deg) translate(0, 1.3rem);
-	}
-
-	.line:nth-child(2) {
-		opacity: 0;
-	}
-
-	&:hover .line:nth-child(2){
-		opacity: 1;
-	}
-
-	.line:last-child {
-		transform: rotate(-45deg) translate(0, -1.3rem);
-	}
+// Header styling
+.header {
+	width: 100%;
+	height: 90vh;
+	@include flex(row, flex-start, flex-end);
 }
 
-// Scroll bar styling
-::-webkit-scrollbar {
-	width: 10px;
+// Header slogan
+.slogan__container {
+	margin: 1rem;
+	border-left: 5px solid $primaryColor;
 }
 
-::-webkit-scrollbar-thumb {
-	background: $secondaryBackground;
+.slogan-text {
+	font-size: 3rem;
+	line-height: 200%;
+	margin-left: 1rem;
+	color: $primaryColor;
 }

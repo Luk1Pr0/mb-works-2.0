@@ -23,6 +23,14 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #131313;
+}
+
 .nav {
   width: 100%;
   height: 7rem;
@@ -40,6 +48,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  z-index: 10;
 }
 
 .nav-logo__container {
@@ -105,6 +114,24 @@ a {
           transform: translate(30px);
 }
 
+.burger--cross .line:first-child {
+  -webkit-transform: rotate(45deg) translate(0, 1.3rem);
+          transform: rotate(45deg) translate(0, 1.3rem);
+}
+
+.burger--cross .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger--cross:hover .line:nth-child(2) {
+  opacity: 1;
+}
+
+.burger--cross .line:last-child {
+  -webkit-transform: rotate(-45deg) translate(0, -1.3rem);
+          transform: rotate(-45deg) translate(0, -1.3rem);
+}
+
 .line {
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
@@ -120,6 +147,7 @@ nav ul {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,29 +208,33 @@ nav ul li a:hover {
   border-radius: 100%;
 }
 
-.burger--cross .line:first-child {
-  -webkit-transform: rotate(45deg) translate(0, 1.3rem);
-          transform: rotate(45deg) translate(0, 1.3rem);
+.header {
+  width: 100%;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.burger--cross .line:nth-child(2) {
-  opacity: 0;
+.slogan__container {
+  margin: 1rem;
+  border-left: 5px solid #f0f0f0;
 }
 
-.burger--cross:hover .line:nth-child(2) {
-  opacity: 1;
-}
-
-.burger--cross .line:last-child {
-  -webkit-transform: rotate(-45deg) translate(0, -1.3rem);
-          transform: rotate(-45deg) translate(0, -1.3rem);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #131313;
+.slogan-text {
+  font-size: 3rem;
+  line-height: 200%;
+  margin-left: 1rem;
+  color: #f0f0f0;
 }
 /*# sourceMappingURL=style.css.map */
