@@ -1,5 +1,5 @@
 // Variables
-$primaryBackground: linear-gradient(4deg, rgb(36, 75, 71) 0%, rgb(0, 111, 119) 100%);
+$primaryBackground: linear-gradient(4deg, rgb(1, 70, 63) 0%, rgb(0, 111, 119) 100%);
 $secondaryBackground: rgb(19, 19, 19);
 $primaryColor: rgb(240, 240, 240);
 $secondaryColor: rgb(217, 255, 0);
@@ -30,7 +30,6 @@ html {
 }
 
 body {
-	overflow-x: hidden;
 	width: 100%;
 	min-height: 200vh;
 	background: $primaryBackground;
@@ -140,5 +139,3 @@ nav ul li a {
 	transform: translate(0, -100%);
 	border-radius: 100%;
 }
-
-// Animations
