@@ -179,4 +179,26 @@ nav ul li a:hover {
           transform: translate(0, -100%);
   border-radius: 100%;
 }
+
+.burger--cross .line:first-child {
+  -webkit-transform: rotate(45deg) translate(0, 1.3rem);
+          transform: rotate(45deg) translate(0, 1.3rem);
+}
+
+.burger--cross .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger--cross .line:last-child {
+  -webkit-transform: rotate(-45deg) translate(0, -1.3rem);
+          transform: rotate(-45deg) translate(0, -1.3rem);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #131313;
+}
 /*# sourceMappingURL=style.css.map */
