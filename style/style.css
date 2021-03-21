@@ -189,6 +189,10 @@ nav ul li a:hover {
   opacity: 0;
 }
 
+.burger--cross:hover .line:nth-child(2) {
+  opacity: 1;
+}
+
 .burger--cross .line:last-child {
   -webkit-transform: rotate(-45deg) translate(0, -1.3rem);
           transform: rotate(-45deg) translate(0, -1.3rem);
