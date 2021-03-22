@@ -287,7 +287,8 @@ nav ul li a:hover {
 .dark-overlay {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
   position: absolute;
   z-index: 1;
 }
@@ -340,11 +341,20 @@ nav ul li a:hover {
           transform: translateY(0);
 }
 
-.highlight--title {
+.highlight-title--dark {
+  color: #131313;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.highlight-title--light {
   color: #d9ff00;
   -webkit-transform: scale(2);
           transform: scale(2);
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 4rem;
 }
 
 footer {
