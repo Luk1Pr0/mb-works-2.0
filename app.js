@@ -33,7 +33,7 @@ const closeNav = () => {
 
 // Stretch the divider line of the slogan
 const stretch = () => {
-	dividerLine.classList.add('stretch');
+	dividerLine.classList.add('animate-stretch');
 }
 
 // Slide elements
@@ -53,6 +53,6 @@ const slideDown = () => {
 burger.addEventListener('click', toggleNav);
 
 // On load
-setTimeout(slideDown, 500);
-setTimeout(stretch, 500);
+setTimeout(slideDown, 400);
+setTimeout(stretch, 400);
 setTimeout(slideRight, 1000);

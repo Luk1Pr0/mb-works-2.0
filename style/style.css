@@ -13,9 +13,10 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(4deg, #0f0f0f 0%, #1ba5af 100%);
+  background: linear-gradient(4deg, #0f0f0f 0%, #474747 100%);
   color: #f0f0f0;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -51,8 +52,10 @@ a {
   z-index: 10;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  -webkit-transition: translateY 1s ease;
-  transition: translateY 1s ease;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 .nav--show {
@@ -170,7 +173,7 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(4deg, #0f0f0f 0%, #1ba5af 100%);
+  background: linear-gradient(4deg, #0f0f0f 0%, #474747 100%);
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
   background: #131313;
@@ -251,10 +254,11 @@ nav ul li a:hover {
           align-items: center;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  background: #131313;
 }
 
 .services-menu li {
-  font-size: 1rem;
+  font-size: 1.5rem;
   height: auto;
   width: auto;
 }
@@ -308,7 +312,7 @@ nav ul li a:hover {
   transition: all 1s ease;
 }
 
-.stretch {
+.animate-stretch {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
 }
@@ -345,14 +349,55 @@ nav ul li a:hover {
 
 footer {
   width: 100%;
-  min-height: 20vh;
+  height: auto;
   background: rgba(19, 19, 19, 0.9);
   padding: 2rem 8rem;
 }
 
 .footer-content__container {
-  background: #131313;
   width: 100%;
-  height: 20vh;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-content {
+  width: 30%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.link {
+  position: relative;
+  color: #d9ff00;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+  background: #d9ff00;
+}
+
+.link:hover::after {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
