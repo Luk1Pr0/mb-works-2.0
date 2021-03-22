@@ -48,6 +48,15 @@ a {
           align-items: center;
   position: fixed;
   z-index: 10;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 0.8s all ease;
+  transition: 0.8s all ease;
+}
+
+.nav--show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .nav-logo__container {
@@ -114,8 +123,8 @@ a {
 }
 
 .burger--cross .line:first-child {
-  -webkit-transform: rotate(45deg) translate(0, 1.3rem);
-          transform: rotate(45deg) translate(0, 1.3rem);
+  -webkit-transform: translate(0, 0.9rem) rotate(45deg);
+          transform: translate(0, 0.9rem) rotate(45deg);
 }
 
 .burger--cross .line:nth-child(2) {
@@ -127,8 +136,8 @@ a {
 }
 
 .burger--cross .line:last-child {
-  -webkit-transform: rotate(-45deg) translate(0, -1.3rem);
-          transform: rotate(-45deg) translate(0, -1.3rem);
+  -webkit-transform: translate(0, -0.9rem) rotate(-45deg);
+          transform: translate(0, -0.9rem) rotate(-45deg);
 }
 
 .line {
@@ -197,8 +206,8 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #f0f0f0;
-  -webkit-filter: drop-shadow(0 10px 1px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0 10px 1px rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(0 10px 1px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0 10px 1px rgba(0, 0, 0, 0.3));
 }
 
 .nav--hidden {
@@ -223,18 +232,60 @@ nav ul li a:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background: url(../assets/main-background.JPG);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.dark-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 1;
 }
 
 .slogan__container {
-  margin: 2rem 5rem;
-  border-left: 5px solid #f0f0f0;
+  margin: 3rem 8rem;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+  min-height: 5rem;
+}
+
+.divider-line {
+  background: white;
+  width: 5px;
+  height: 0;
+  position: absolute;
+  -webkit-transition: 0.8s all ease;
+  transition: 0.8s all ease;
+}
+
+.stretch {
+  height: 100%;
 }
 
 .slogan-text {
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 200%;
   margin-left: 1rem;
   color: #f0f0f0;
+}
+
+.animate-slide {
+  display: inline-block;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: 0.8s all ease;
+  transition: 0.8s all ease;
+}
+
+.animate-slide--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .highlight--title {
@@ -247,7 +298,7 @@ footer {
   width: 100%;
   min-height: 20vh;
   background: rgba(19, 19, 19, 0.9);
-  padding: 2rem 5rem;
+  padding: 2rem 8rem;
 }
 
 .footer-content__container {
