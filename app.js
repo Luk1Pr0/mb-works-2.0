@@ -53,6 +53,6 @@ const slideDown = () => {
 burger.addEventListener('click', toggleNav);
 
 // On load
-slideDown();
-stretch();
-setTimeout(slideRight, 500);
+setTimeout(slideDown, 500);
+setTimeout(stretch, 500);
+setTimeout(slideRight, 1000);
