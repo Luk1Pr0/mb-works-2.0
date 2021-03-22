@@ -18,7 +18,9 @@
 	<nav class='nav' id='nav-container'>
 
 		<div class="nav-logo__container">
-			<img src="./favicon.png" alt="MB Works logo" class='nav-logo'>
+			<a href="index.html">
+				<img src="./favicon.png" alt="MB Works logo" class='nav-logo'>
+			</a>
 		</div>
 
 		<!-- Burger container -->
@@ -31,7 +33,15 @@
 		<!-- Burger nav menu -->
 		<ul id='navigation' class='nav--hidden'>
 			<li><a href="">Home</a></li>
-			<li><a href="">Services</a></li>
+			<div class="services__container">
+				<li><a href="">Services</a></li>
+				<ul class='services-menu'>
+					<li><a href="#">Service 1</a></li>
+					<li><a href="#">Service 2</a></li>
+					<li><a href="#">Service 3</a></li>
+					<li><a href="#">Service 4</a></li>
+				</ul>
+			</div>
 			<li><a href="">Our Work</a></li>
 			<li><a href="">About Us</a></li>
 		</ul>

@@ -1,3 +1,6 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 // Variables
 $bodyBackground: linear-gradient(4deg, rgb(15, 15, 15) 0%, rgb(27, 165, 175) 100%);
 $primaryBackground: rgb(19, 19, 19);
@@ -6,10 +9,10 @@ $secondaryColor: rgb(217, 255, 0);
 $hiddenText: rgba(240, 240, 240, 0.2);
 $shadow: rgba(0, 0, 0, 0.3);
 
-$font: sans-serif;
-$transitionLong: 1s all ease;
-$transitionMedium: 0.6s all ease;
-$transitionShort: 0.2s all ease;
+$font: 'Poppins', sans-serif;;
+$transitionLong: 1s ease;
+$transitionMedium: 0.6s ease;
+$transitionShort: 0.2s ease;
 
 $bodyPadding: 8rem;
 
@@ -62,7 +65,7 @@ a {
 	position: fixed;
 	z-index: 10;
 	transform: translateY(-100%);
-	transition: $transitionLong;
+	transition: translateY $transitionLong;
 }
 
 // Show nav with javascript
@@ -87,10 +90,10 @@ a {
 // Burger and burger lines styling
 .burger {
 	width: 3rem;
-	height: 2.2rem;
+	height: 2rem;
 	@include flex(column, space-between);
 	cursor: pointer;
-	transition: $transitionShort;
+	transition: all $transitionShort;
 	position: absolute;
 	right: $bodyPadding;
 	z-index: 10;
@@ -134,10 +137,10 @@ a {
 }
 
 .line {
-	transition: $transitionShort;
+	transition: all $transitionShort;
 	background: $secondaryColor;
 	width: 100%;
-	height: 20%;
+	height: 10%;
 	border-radius: 1rem;
 }
 
@@ -151,8 +154,8 @@ nav ul {
 	z-index: 9;
 	@include flex(column, center);
 	background: $bodyBackground;
-	transition: $transitionMedium;
-	background:$primaryBackground;
+	transition: all $transitionMedium;
+	background: $primaryBackground;
 }
 
 nav ul li {
@@ -161,6 +164,7 @@ nav ul li {
 	width: 100%;
 	height: 20vh;
 	font-size: 2rem;
+	text-transform: uppercase;
 }
 
 nav ul li a {
@@ -180,6 +184,32 @@ nav ul li a {
 .nav--hidden {
 	transform: translate(0, -100%);
 	border-radius: 100%;
+}
+
+.services__container {
+	position: relative;
+	width: 100%;
+	height: auto;
+	&:hover .services-menu {
+		transform: scale(1);
+	}
+}
+
+.services-menu {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform: scaleY(0);
+	@include flex(column, space-between);
+	transition: $transitionShort;
+
+
+	li {
+		font-size: 1rem;
+		height: auto;
+		width: auto;
+	}
 }
 
 // Header styling
@@ -214,14 +244,15 @@ nav ul li a {
 .divider-line {
 	background: white;
 	width: 5px;
-	height: 0;
+	height: 100%;
+	transform: scaleY(0);
 	position: absolute;
-	transition: $transitionLong;
+	transition: all $transitionLong;
 }
 
 // Class added via javascript
 .stretch {
-	height: 100%;
+	transform: scaleY(1);
 }
 
 .slogan-text {
@@ -229,23 +260,27 @@ nav ul li a {
 	line-height: 200%;
 	margin-left: 1rem;
 	color: $primaryColor;
+	font-weight: 300;
 }
 
 .animate-slide {
 	display: inline-block;
-	transform: translateX(-100vw);
+	opacity: 0;
+	transform: translateY(10px);
 	transition: $transitionMedium;
 }
 
 // Class added via javascript
 .animate-slide--active {
-	transform: translateX(0);
+	opacity: 1;
+	transform: translateY(0);
 }
 
 // Highilghted empasised text
 .highlight--title {
 	color: $secondaryColor;
 	transform: scale(2);
+	font-weight: 600;
 }
 
 footer {
