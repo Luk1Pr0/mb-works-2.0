@@ -31,7 +31,7 @@ html {
 
 body {
 	width: 100%;
-	min-height: 200vh;
+	min-height: 100vh;
 	background: $bodyBackground;
 	color: $primaryColor;
 	font-family: $font;
@@ -190,4 +190,10 @@ nav ul li a {
 	line-height: 200%;
 	margin-left: 1rem;
 	color: $primaryColor;
+}
+
+footer {
+	width: 100%;
+	min-height: 20vh;
+	background: rgba($primaryBackground, 0.9);
 }

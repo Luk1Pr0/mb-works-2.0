@@ -11,7 +11,7 @@ html {
 
 body {
   width: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
   background: linear-gradient(4deg, #182b2e 0%, #4e898d 100%);
   color: #f0f0f0;
   font-family: sans-serif;
@@ -235,5 +235,11 @@ nav ul li a:hover {
   line-height: 200%;
   margin-left: 1rem;
   color: #f0f0f0;
+}
+
+footer {
+  width: 100%;
+  min-height: 20vh;
+  background: rgba(19, 19, 19, 0.9);
 }
 /*# sourceMappingURL=style.css.map */
