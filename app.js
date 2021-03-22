@@ -1,6 +1,8 @@
 const nav = document.getElementById('navigation');
 const burger = document.getElementById('burger');
 
+const slogan = document.querySelectorAll('.slide');
+
 // Toggle navigation
 const toggleNav = () => {
 	// Toggle hidden class

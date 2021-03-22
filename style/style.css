@@ -12,7 +12,7 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(4deg, #182b2e 0%, #4e898d 100%);
+  background: linear-gradient(4deg, #0f0f0f 0%, #1ba5af 100%);
   color: #f0f0f0;
   font-family: sans-serif;
 }
@@ -160,7 +160,7 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(4deg, #182b2e 0%, #4e898d 100%);
+  background: linear-gradient(4deg, #0f0f0f 0%, #1ba5af 100%);
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   background: #131313;
@@ -237,9 +237,22 @@ nav ul li a:hover {
   color: #f0f0f0;
 }
 
+.highlight--title {
+  color: #d9ff00;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
 footer {
   width: 100%;
   min-height: 20vh;
   background: rgba(19, 19, 19, 0.9);
+  padding: 2rem 5rem;
+}
+
+.footer-content__container {
+  background: #131313;
+  width: 100%;
+  height: 20vh;
 }
 /*# sourceMappingURL=style.css.map */
