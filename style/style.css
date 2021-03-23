@@ -601,7 +601,6 @@ nav ul li a:hover {
 .card-img__container {
   width: 100%;
   height: 40vh;
-  pointer-events: none;
 }
 
 .card-img__container .card-img {
@@ -622,12 +621,6 @@ nav ul li a:hover {
   top: 0;
   height: 100%;
   width: 100%;
-}
-
-.card-content__container:hover .card-text {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  opacity: 1;
 }
 
 .card-title {
@@ -682,7 +675,6 @@ nav ul li a:hover {
           align-items: center;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -690,6 +682,8 @@ nav ul li a:hover {
 @media screen and (max-width: 1280px) {
   .card-text {
     font-size: 1rem;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
