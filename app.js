@@ -7,6 +7,9 @@ const burger = document.getElementById('burger');
 const sloganText = document.querySelectorAll('.animate-slide');
 const dividerLine = document.querySelector('.divider-line');
 
+const sectionTitles = document.querySelectorAll('.section-title');
+const contentContainers = document.querySelectorAll('.content__container');
+
 // Toggle navigation
 const toggleNav = () => {
 	// Toggle hidden class
@@ -45,7 +48,34 @@ const slideDown = () => {
 	navContainer.classList.add('nav--show');
 }
 
+// Elements that slide in when scroll reaches them
+const slideInElements = () => {
+	// Web page size
+	const windowHeight = window.innerHeight;
+
+	sectionTitles.forEach(title => {
+		const titleTop = title.getBoundingClientRect().top;
+		// console.log('title', titleTop);
+
+
+		contentContainers.forEach(container => {
+			const containerTop = container.getBoundingClientRect().top;
+			const containerHeight = container.getBoundingClientRect().height;
+			console.log('height', containerHeight);
+			console.log('top', containerTop);
+			// If window height becomes bigger than sections top position, show the section content
+			// if (containerTop < containerTop + containerHeight) {
+			// 	container.classList.remove('slide-up');
+			// } else {
+			// 	container.classList.add('slide-up');
+			// }
+		})
+	})
+
+}
+
 // Event listeners
+window.addEventListener('scroll', slideInElements);
 burger.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 

@@ -398,6 +398,9 @@ nav ul li a {
 	font-size: 1.2rem;
 	width: 100%;
 	@include flex();
+	transition: all $transitionMedium;
+	transform: translateY(0);
+	opacity: 1;
 
 	&--3 {
 		@include flex(row, flex-start, flex-start);
@@ -407,6 +410,13 @@ nav ul li a {
 	&--4 {
 		@include flex(column);
 	}
+}
+
+.slide-up {
+	transition: all $transitionLong;
+
+	transform: translateY(100%);
+	opacity: 0;
 }
 
 .intro-text {
