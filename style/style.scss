@@ -10,7 +10,7 @@ $primaryColor: rgb(240, 240, 240);
 $secondaryColor: rgb(217, 255, 0);
 $hiddenText: rgba(240, 240, 240, 0.2);
 $shadow: rgba(0, 0, 0, 0.3);
-$boxShadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.5);
+$boxShadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.2);
 
 $font: 'Poppins', sans-serif;;
 $transitionLong: 1s ease;
@@ -306,15 +306,14 @@ nav ul li a {
 .section {
 	width: 100%;
 	min-height: 20vh;
-	padding: 2rem $bodyPadding;
+	padding: 10rem $bodyPadding;
 
 	&--1 {
-		background: $primaryBackground;	
+		background: $primaryBackground;
 	}
 
 	&--2 {
 		background: $secondaryBackground;
-
 	}
 }
 
@@ -323,7 +322,7 @@ nav ul li a {
 	width: 100%;
 	height: auto;
 	text-align: center;
-	padding-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .section-title {
@@ -332,70 +331,82 @@ nav ul li a {
 }
 
 .content__container {
-	text-align: center;
 	font-size: 1.2rem;
+
+	&--1 {
+		@include flex();
+	}
+}
+
+.intro-text {
+	text-align: left;
+	width: 50%;
+	line-height: 170%;
 }
 
 // Service cards container
 .service-cards__container {
 	width: 100%;
 	height: auto;
-	@include flex(row, space-between);
+	@include flex(row);
 }
 
 // Service card
 .service__card {
 	background: $shadow;
-	width: 24%;
-	min-height: 25rem;
-	@include flex(column, space-between);
-	border-radius: $borderRadius;
+	width: 30%;
+	margin: 0 1rem;
+	height: auto;
 	position: relative;
 	overflow: hidden;
+	box-shadow: $boxShadow;
 
-	&:hover .card__content {
-		transform: translateY(0);
+	&:hover .card-text{
+		transform: scaleY(1);
+		opacity: 1;
 	}
 }
 
-// Service card image container
 .card-img__container {
 	width: 100%;
-	height: 25rem;
-	border-radius: $borderRadius;
-	cursor: pointer;
+	height: 40vh;
 
 	.card-img {
-		border-radius: $borderRadius;	
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
 }
 
-// Service card content
-.card__content {
-	pointer-events: none;
-	text-align: center;
+.card-content__container {
 	position: absolute;
-	padding: 1rem;
-	bottom: 0;
+	top: 0;
+	height: 100%;
 	width: 100%;
-	background: rgba($primaryBackground, 0.8);
-
-	@include flex(column);
-	transition: $transitionShort;
-	transform: translateY(65%);
 }
 
 .card-title {
-	text-transform: uppercase;
 	font-size: 2rem;
-	margin: 1rem 0;
+	position: absolute;
+	bottom: 0;
+	background: rgba($secondaryBackground, 0.8);
+	height: 15%;
+	width: 100%;
+	@include flex();
 }
 
 .card-text {
-	letter-spacing: 1px;
+	padding: 1rem;
+	padding-top: 0;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	height: 85%;
+	background: rgba($secondaryBackground, 0.8);
+	@include flex();
+	transform: scaleY(0);
+	opacity: 0;
+	transition: $transitionShort;
 }
 
 // Highlight text styling
