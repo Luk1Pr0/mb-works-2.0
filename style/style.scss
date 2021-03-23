@@ -184,6 +184,7 @@ nav ul {
 	background: $bodyBackground;
 	transition: all $transitionMedium;
 	background: $primaryBackground;
+	overflow: auto;
 }
 
 nav ul li {
@@ -253,6 +254,7 @@ nav ul li a {
 	background: url(../assets/main-background.JPG);
 	background-size: cover;
 	background-position: center;
+	position: relative;
 
 	@media screen and (max-width: $mobileBreak) {
 		height: 90vh;
@@ -265,6 +267,8 @@ nav ul li a {
 	height: 100%;
 	background: $overlayBackground;
 	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: 1;
 
 	@media screen and (max-width: $mobileBreak) {
