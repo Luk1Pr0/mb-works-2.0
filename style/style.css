@@ -623,6 +623,12 @@ nav ul li a:hover {
   width: 100%;
 }
 
+.card-content__container:hover .card-text {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  opacity: 1;
+}
+
 .card-title {
   font-size: 1.5rem;
   position: absolute;
@@ -675,6 +681,7 @@ nav ul li a:hover {
           align-items: center;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
+  opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -684,6 +691,7 @@ nav ul li a:hover {
     font-size: 1rem;
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
+    opacity: 1;
   }
 }
 

@@ -475,6 +475,11 @@ nav ul li a {
 	top: 0;
 	height: 100%;
 	width: 100%;
+
+	&:hover .card-text {
+		transform: scaleY(1);
+		opacity: 1;
+	}
 }
 
 .card-title {
@@ -502,12 +507,13 @@ nav ul li a {
 	background: rgba($secondaryBackground, 0.8);
 	@include flex(column, center);
 	transform: scaleY(0);
-	// opacity: 0;
+	opacity: 0;
 	transition: $transitionShort;
 
 	@media screen and (max-width: $mobileBreak) {
 		font-size: 1rem;
 		transform: scaleY(1);
+		opacity: 1;
 	}
 }
 
