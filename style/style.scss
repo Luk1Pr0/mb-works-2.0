@@ -352,14 +352,18 @@ nav ul li a {
 	padding: 10rem $bodyPadding;
 
 	&--1 {
-		background: $secondaryBackground;
-	}
-
-	&--2 {
 		background: $primaryBackground;
 	}
 
+	&--2 {
+		background: $secondaryBackground;
+	}
+
 	&--3 {
+		background: $primaryBackground;
+	}
+
+	&--4 {
 		background: $secondaryBackground;
 	}
 
@@ -389,6 +393,10 @@ nav ul li a {
 	&--3 {
 		@include flex(row, flex-start, flex-start);
 		flex-wrap: wrap;
+	}
+
+	&--4 {
+		@include flex(column);
 	}
 }
 
@@ -583,6 +591,7 @@ nav ul li a {
 
 	@media screen and (max-width: $mobileBreak) {
 		width: 100%;
+		height: 70vh;
 	}
 }
 
@@ -592,6 +601,105 @@ nav ul li a {
 	object-fit: cover;
 	transition: $transitionMedium;
 	opacity: 0.5;
+}
+
+// Form section
+.form__container {
+	width: 50%;
+	margin-top: 2rem;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 100%;
+	}
+}
+
+.contact-form {
+	background: $primaryBackground;
+	text-align: center;	
+	min-height: 10vh;
+	padding: 4rem 7rem;
+
+	@media screen and (max-width: $mobileBreak) {
+		padding: 2rem;
+	}
+}
+
+// Top form style
+.form-top {
+	@include flex(row, space-between);
+
+	@media screen and (max-width: $mobileBreak) {
+		@include flex(column);
+	}
+}
+
+.input__container {
+	margin: 1rem 0;
+	@include flex(column, flex-start, flex-start);
+
+	&--name {
+		width: 50%;
+		margin-right: 1rem;
+
+		@media screen and (max-width: $mobileBreak) {
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	&--email {
+		width: 50%;
+
+		@media screen and (max-width: $mobileBreak) {
+			width: 100%;
+		}
+	}	
+}
+
+label {
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+}
+
+input {
+	width: 100%;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid $primaryColor;
+	padding: 2px;
+	color: $primaryColor;
+	font-size: 1rem;
+	font-family: $font;
+
+	&:focus {
+		border-bottom: 1px solid $secondaryColor;
+		outline: none;
+	}
+
+	&:focus .myl {
+		background: $secondaryColor;
+	}
+}
+
+
+// Bottom form style
+.form-bottom {
+}
+
+textarea {
+	min-width: 100%;
+	width: 100%;
+	max-width: 100%;
+	min-height: 10rem;
+	max-height: 10rem;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid $primaryColor;
+	outline: none;
+	padding: 2px;
+	color: $primaryColor;
+	font-size: 1rem;
+	font-family: $font;
 }
 
 // Footer styling
