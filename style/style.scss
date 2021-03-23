@@ -39,6 +39,7 @@ $mobileBreak: 1280px;
 
 html {
 	font-size: 16px;
+	scroll-behavior: smooth;
 
 	@media screen and (max-width: $mobileBreak) {
 		font-smooth: 10px;
@@ -207,7 +208,7 @@ nav ul li a {
 	}
 }
 
-// Class to hide elements
+// Class to hide navigation with Javascript
 .nav--hidden {
 	transform: translate(0, -100%);
 	border-radius: 100%;
@@ -703,8 +704,6 @@ input {
 
 
 // Bottom form style
-.form-bottom {
-}
 
 textarea {
 	min-width: 100%;

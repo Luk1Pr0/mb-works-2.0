@@ -1,6 +1,7 @@
 const navContainer = document.getElementById('nav-container');
 
 const nav = document.getElementById('navigation');
+const navLinks = document.querySelectorAll('.nav-link');
 const burger = document.getElementById('burger');
 
 const sloganText = document.querySelectorAll('.animate-slide');
@@ -26,11 +27,6 @@ const toggleNav = () => {
 	}
 }
 
-// Close nav after link is clicked
-const closeNav = () => {
-	nav.classList.add('nav--hidden');
-}
-
 // Stretch the divider line of the slogan
 const stretch = () => {
 	dividerLine.classList.add('animate-stretch');
@@ -51,6 +47,7 @@ const slideDown = () => {
 
 // Event listeners
 burger.addEventListener('click', toggleNav);
+navLinks.forEach(link => link.addEventListener('click', toggleNav));
 
 // On load
 setTimeout(slideDown, 400);
