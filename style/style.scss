@@ -10,7 +10,7 @@ $primaryColor: rgb(240, 240, 240);
 $secondaryColor: rgb(217, 255, 0);
 $hiddenText: rgba(240, 240, 240, 0.2);
 $shadow: rgba(0, 0, 0, 0.3);
-$boxShadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.2);
+$boxShadow: 5px 15px 20px 1px rgba(0, 0, 0, 0.2);
 
 $font: 'Poppins', sans-serif;;
 $transitionLong: 1s ease;
@@ -18,7 +18,9 @@ $transitionMedium: 0.6s ease;
 $transitionShort: 0.2s ease;
 
 $bodyPadding: 8rem;
+$mobilePadding: 1rem;
 $borderRadius: 1rem;
+$mobileBreak: 1280px;
 
 // Mixins
 @mixin flex($direction: row, $justify: center, $align: center) {
@@ -37,6 +39,10 @@ $borderRadius: 1rem;
 
 html {
 	font-size: 16px;
+
+	@media screen and (max-width: $mobileBreak) {
+		font-smooth: 10px;
+	}
 }
 
 body {
@@ -87,6 +93,10 @@ p {
 	position: absolute;
 	left: $bodyPadding;
 	z-index: 10;
+	
+	@media screen and (max-width: $mobileBreak) {
+		left: $mobilePadding;
+	}
 }
 
 .nav-logo {
@@ -105,6 +115,10 @@ p {
 	position: absolute;
 	right: $bodyPadding;
 	z-index: 10;
+
+	@media screen and (max-width: $mobileBreak) {
+		right: $mobilePadding;
+	}
 
 	&:hover .line:first-child {
 		transform: translate(15px);
@@ -229,6 +243,10 @@ nav ul li a {
 	background: url(../assets/main-background.JPG);
 	background-size: cover;
 	background-position: center;
+
+	@media screen and (max-width: $mobileBreak) {
+		height: 100vh;
+	}
 }
 
 // Dark overlay
@@ -238,6 +256,10 @@ nav ul li a {
 	background: $overlayBackground;
 	position: absolute;
 	z-index: 1;
+
+	@media screen and (max-width: $mobileBreak) {
+		background: $shadow;
+	}
 }
 
 // Header slogan
@@ -247,10 +269,14 @@ nav ul li a {
 	z-index: 2;
 	transition: 1s all ease;
 	min-height: 5rem;
+
+	@media screen and (max-width: $mobileBreak) {
+		margin: $mobilePadding;
+	}
 }
 
 .divider-line {
-	background: white;
+	background: $primaryColor;
 	width: 5px;
 	height: 100%;
 	transform: scaleY(0);
@@ -269,6 +295,10 @@ nav ul li a {
 	margin-left: 1rem;
 	color: $primaryColor;
 	font-weight: 300;
+
+	@media screen and (max-width: $mobileBreak) {
+		font-size: 1.5rem;
+	}
 }
 
 .animate-slide {
@@ -300,6 +330,10 @@ nav ul li a {
 // Logo text styling
 .logo-text {
 	font-size: 4rem;
+
+	@media screen and (max-width: $mobileBreak) {
+		font-size: 2.5rem;
+	}
 }
 
 // Section styling
@@ -314,6 +348,10 @@ nav ul li a {
 
 	&--2 {
 		background: $secondaryBackground;
+	}
+
+	@media screen and (max-width: $mobileBreak) {
+		padding: $mobilePadding;
 	}
 }
 
@@ -342,6 +380,11 @@ nav ul li a {
 	text-align: left;
 	width: 50%;
 	line-height: 170%;
+
+	@media screen and (max-width: $mobileBreak) {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 // Service cards container
@@ -349,6 +392,10 @@ nav ul li a {
 	width: 100%;
 	height: auto;
 	@include flex(row);
+
+	@media screen and (max-width: $mobileBreak) {
+		@include flex(column)
+	}
 }
 
 // Service card
@@ -360,6 +407,11 @@ nav ul li a {
 	position: relative;
 	overflow: hidden;
 	box-shadow: $boxShadow;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 100%;
+		margin: 1rem 0;
+	}
 
 	&:hover .card-text{
 		transform: scaleY(1);
@@ -393,6 +445,10 @@ nav ul li a {
 	height: 15%;
 	width: 100%;
 	@include flex();
+
+	@media screen and (max-width: $mobileBreak) {
+		font-size: 1.5rem;
+	}
 }
 
 .card-text {
@@ -407,6 +463,10 @@ nav ul li a {
 	transform: scaleY(0);
 	opacity: 0;
 	transition: $transitionShort;
+
+	@media screen and (max-width: $mobileBreak) {
+		font-size: 1rem;
+	}
 }
 
 // Highlight text styling
@@ -426,6 +486,10 @@ footer {
 	height: auto;
 	background: rgba($primaryBackground, 0.9);
 	padding: 2rem $bodyPadding;
+
+	@media screen and (max-width: $mobileBreak) {
+		padding: $mobilePadding;
+	}
 }
 
 .footer-content__container {
@@ -433,13 +497,22 @@ footer {
 	min-height: 10vh;
 	@include flex(row, center, center);
 	flex-wrap: wrap;
+
+	@media screen and (max-width: $mobileBreak) {
+		@include flex(row, center, flex-start);
+	}
 }
 
 // Footer content styling
 .footer-content {
 	width: 30%;
 	text-align: center;
-	padding: 1rem;
+	padding: 0 1rem;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 50%;
+		margin: 1rem 0;
+	}
 }
 
 // Link class used for links
