@@ -449,7 +449,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 1280px) {
   .section {
-    padding: 1rem;
+    padding: 4rem 1rem;
   }
 }
 
@@ -463,6 +463,12 @@ nav ul li a:hover {
 .section-title {
   font-size: 2.5rem;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1280px) {
+  .section-title {
+    font-size: 2rem;
+  }
 }
 
 .content__container {
@@ -592,15 +598,10 @@ nav ul li a:hover {
   }
 }
 
-.service__card:hover .card-text {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  opacity: 1;
-}
-
 .card-img__container {
   width: 100%;
   height: 40vh;
+  pointer-events: none;
 }
 
 .card-img__container .card-img {
@@ -621,6 +622,12 @@ nav ul li a:hover {
   top: 0;
   height: 100%;
   width: 100%;
+}
+
+.card-content__container:hover .card-text {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  opacity: 1;
 }
 
 .card-title {
@@ -978,6 +985,13 @@ textarea {
 
 textarea:focus {
   border-bottom: 1px solid #d9ff00;
+}
+
+@media screen and (max-width: 1280px) {
+  textarea {
+    min-height: 5rem;
+    max-height: 5rem;
+  }
 }
 
 footer {
