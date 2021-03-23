@@ -510,6 +510,14 @@ nav ul li a {
 .btn__container {
 	width: 100%;
 	text-align: center;
+
+	&--form {
+		@include flex(row, space-around);
+
+		@media screen and (max-width: $mobileBreak) {
+			@include flex(row, space-between);
+		}
+	}
 }
 
 .btn {
@@ -551,6 +559,22 @@ nav ul li a {
 
 	&--gallery {
 		font-size: 1.3rem;
+	}
+
+	&--success {
+		border: 1px solid lime;
+
+		&::after {
+			background: lime;
+		}
+	}
+
+	&--fail {
+		border: 1px solid crimson;
+
+		&::after {
+			background: crimson;
+		}
 	}
 
 	
@@ -675,10 +699,6 @@ input {
 		border-bottom: 1px solid $secondaryColor;
 		outline: none;
 	}
-
-	&:focus .myl {
-		background: $secondaryColor;
-	}
 }
 
 
@@ -700,6 +720,10 @@ textarea {
 	color: $primaryColor;
 	font-size: 1rem;
 	font-family: $font;
+
+	&:focus {
+		border-bottom: 1px solid $secondaryColor;
+	}
 }
 
 // Footer styling

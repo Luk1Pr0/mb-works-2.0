@@ -32,7 +32,7 @@
 
 		<!-- Burger nav menu -->
 		<ul id='navigation' class='nav--hidden'>
-			<li><a href="" title='Home'>Home</a></li>
+			<li><a href="#home-section" title='Home'>Home</a></li>
 			<div class="services__container">
 				<li title='Services'><a href='#'>Services</a></li>
 				<ul class='services-menu'>
@@ -42,8 +42,8 @@
 					<li><a href="#" title='Service 4'>Service 4</a></li>
 				</ul>
 			</div>
-			<li><a href="" title='Our Work'>Our Work</a></li>
-			<li><a href="" title='Contact Us'>Contact Us</a></li>
+			<li><a href="#our-work-section" title='Our Work'>Our Work</a></li>
+			<li><a href="#contact-section" title='Contact Us'>Contact Us</a></li>
 		</ul>
 	</nav>
 
@@ -76,7 +76,7 @@
 	</header>
 
 	<!-- Section 1 -->
-	<section class="section section--1">
+	<section class="section section--1" id='home-section'>
 
 		<!-- Section title container -->
 		<div class="section-title__container">
@@ -98,7 +98,7 @@
 	</section>
 
 	<!-- Section 2 -->
-	<section class="section section--2">
+	<section class="section section--2" id='services-section'>
 
 		<!-- Section title container -->
 		<div class="section-title__container">
@@ -246,7 +246,7 @@
 	</section>
 
 	<!-- Section 3 -->
-	<section class="section section--3">
+	<section class="section section--3" id='our-work-section'>
 
 		<!-- Section title container -->
 		<div class="section-title__container">
@@ -298,7 +298,7 @@
 	</section>
 
 	<!-- Section 4 -->
-	<section class="section section--4">
+	<section class="section section--4" id='contact-section'>
 
 		<!-- Section title container -->
 		<div class="section-title__container">
@@ -311,12 +311,10 @@
 
 			<!-- Intro text -->
 			<p class='intro-text'>
-				MB Works is a team
-				of friendly professionals,
-				with over 10 years of experience in the construction and building
-				industry. Based in Slough, we offer services within London, Beaconsfield, Maidenhead, Reading and more.
-				We build, maintain and carry out refurbishments on all different kinds of properties. If you have any
-				questions or a project you need assistance with, <a href="" class="link"> get in touch</a> now!
+				Do you have a job, that we could assist you with? Maybe you need your kitchen refurbished or
+				totally rebuilt? Or maybe you need your whole house totally renovated? If you have any kind of project,
+				that we could assist you with, please get in touch
+				using the contact form below.
 			</p>
 
 			<!-- Contact form container -->
@@ -352,8 +350,8 @@
 
 					<!-- Button container -->
 					<div class="btn__container btn__container--form">
-						<button class="btn btn--submit">Send</button>
-						<button class="btn btn--reset">Reset</button>
+						<button class="btn btn--success" type='submit'>Send</button>
+						<button class="btn btn--fail" type='reset'>Reset</button>
 					</div>
 
 				</form>
