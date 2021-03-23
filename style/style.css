@@ -94,6 +94,13 @@ p {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1280px) {
+  .nav-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
 .burger {
   width: 3rem;
   height: 2rem;
@@ -243,6 +250,12 @@ nav ul li a:hover {
   border-radius: 100%;
 }
 
+@media screen and (max-width: 1280px) {
+  .nav--hidden {
+    border-radius: 0;
+  }
+}
+
 .services__container {
   position: relative;
   width: 100%;
@@ -308,7 +321,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 1280px) {
   .header {
-    height: 100vh;
+    height: 90vh;
   }
 }
 
@@ -544,6 +557,12 @@ nav ul li a:hover {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1280px) {
+  .card-img__container {
+    height: 60vh;
+  }
+}
+
 .card-content__container {
   position: absolute;
   top: 0;
@@ -591,10 +610,10 @@ nav ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -612,6 +631,45 @@ nav ul li a:hover {
   .card-text {
     font-size: 1rem;
   }
+}
+
+.btn {
+  outline: none;
+  border: 1px solid #f0f0f0;
+  background: transparent;
+  padding: 8px 10px;
+  margin: 1rem;
+  color: #f0f0f0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f0f0f0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.btn:hover {
+  color: #131313;
 }
 
 .highlight-text--light {
