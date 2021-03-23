@@ -499,6 +499,11 @@ nav ul li a {
 }
 
 // Button styling default for all buttons
+.btn__container {
+	width: 100%;
+	text-align: center;
+}
+
 .btn {
 	outline: none;
 	border: 1px solid $primaryColor;
@@ -521,8 +526,8 @@ nav ul li a {
 		background: $primaryColor;
 		width: 100%;
 		height: 100%;
-		transform: translate(100%, 0);
-		transition: $transitionMedium;
+		transform: translate(0, 100%);
+		transition: $transitionShort;
 		z-index: -1;
 	}
 
@@ -534,6 +539,15 @@ nav ul li a {
 		transition: $transitionShort;
 		transition-delay: 0.2s;
 		color: $primaryBackground;
+	}
+
+	&--gallery {
+		font-size: 1.3rem;
+	}
+
+	
+	@media screen and (max-width: $mobileBreak) {
+		font-size: 1rem;
 	}
 }
 
@@ -565,6 +579,10 @@ nav ul li a {
 	&:hover .gallery-img {
 		transform: scale(1.1);
 		opacity: 1;
+	}
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 100%;
 	}
 }
 
