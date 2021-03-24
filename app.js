@@ -54,11 +54,11 @@ const slideInElements = () => {
 	// const containerHeight = contentContainers[0].getBoundingClientRect().height;
 	// const slideInPos = containerOffsetTop - (containerHeight * 3.5);
 
-	// if (slideInPos < window.pageYOffset) {
-	// 	contentContainers[0].classList.remove('slide-up')
-	// } else {
-	// 	contentContainers[0].classList.add('slide-up')
-	// }
+	if (slideInPos < window.pageYOffset) {
+		contentContainers[0].classList.remove('slide-up')
+	} else {
+		contentContainers[0].classList.add('slide-up')
+	}
 
 	const containerTop = contentContainers[1].getBoundingClientRect().top;
 	const containerBot = contentContainers[1].getBoundingClientRect().bottom;
