@@ -50,28 +50,37 @@ const slideDown = () => {
 
 // Elements that slide in when scroll reaches them
 const slideInElements = () => {
-	// Web page size
-	const windowHeight = window.innerHeight;
+	// const containerOffsetTop = contentContainers[0].getBoundingClientRect().top;
+	// const containerHeight = contentContainers[0].getBoundingClientRect().height;
+	// const slideInPos = containerOffsetTop - (containerHeight * 3.5);
 
-	sectionTitles.forEach(title => {
-		const titleTop = title.getBoundingClientRect().top;
-		// console.log('title', titleTop);
+	// if (slideInPos < window.pageYOffset) {
+	// 	contentContainers[0].classList.remove('slide-up')
+	// } else {
+	// 	contentContainers[0].classList.add('slide-up')
+	// }
+
+	const containerTop = contentContainers[1].getBoundingClientRect().top;
+	const containerBot = contentContainers[1].getBoundingClientRect().bottom;
+	// const slideInPos = 
+
+	console.log('top', containerTop);
+	console.log('bottom', containerBot);
 
 
-		contentContainers.forEach(container => {
-			const containerTop = container.getBoundingClientRect().top;
-			const containerHeight = container.getBoundingClientRect().height;
-			console.log('height', containerHeight);
-			console.log('top', containerTop);
-			// If window height becomes bigger than sections top position, show the section content
-			// if (containerTop < containerTop + containerHeight) {
-			// 	container.classList.remove('slide-up');
-			// } else {
-			// 	container.classList.add('slide-up');
-			// }
-		})
+	contentContainers.forEach((container, i) => {
+		// const containerTop = container.getBoundingClientRect().top;
+		// const containerHeight = container.getBoundingClientRect().height;
+
+		// console.log('top', containerTop);
+		// console.log('height', containerHeight);
+
+		// if (slideInPos < window.pageYOffset) {
+		// 	container.classList.remove('slide-up');
+		// } else {
+		// 	container.classList.add('slide-up');
+		// }
 	})
-
 }
 
 // Event listeners
