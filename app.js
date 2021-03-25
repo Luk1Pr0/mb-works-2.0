@@ -11,6 +11,8 @@ const contentContainers = document.querySelectorAll('.content__container');
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById('formStatus');
 
+const galleryImages = document.querySelectorAll('.gallery-img');
+
 // Toggle navigation
 const toggleNav = () => {
 	// Toggle hidden class
@@ -70,6 +72,9 @@ const slideinContainers = () => {
 			container.classList.add('slide-up');
 		}
 	});
+}
+
+const showModal = () => {
 
 }
 
@@ -100,6 +105,7 @@ const handleSubmit = async (e) => {
 window.addEventListener('scroll', slideinContainers);
 burger.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
+galleryImages.forEach((img, i) => img.addEventListener('click', showModal));
 contactForm.addEventListener('submit', handleSubmit);
 
 // On load
