@@ -12,6 +12,7 @@ const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById('formStatus');
 
 const galleryImages = document.querySelectorAll('.gallery-img');
+const imgModal = document.querySelector('.img-modal__container');
 
 // Toggle navigation
 const toggleNav = () => {
@@ -74,8 +75,10 @@ const slideinContainers = () => {
 	});
 }
 
-const showModal = () => {
-
+const showModal = (e) => {
+	console.log(e.target.src);
+	console.log(imgModal.children[0].src = e.target.src);
+	imgModal.classList.remove('hidden');
 }
 
 // Form submission @Formspreee
