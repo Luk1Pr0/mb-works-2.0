@@ -529,8 +529,9 @@ nav ul li a:hover {
 }
 
 .slide-up {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
 }
 
 .intro-text {
