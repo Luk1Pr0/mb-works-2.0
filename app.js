@@ -7,7 +7,6 @@ const burger = document.getElementById('burger');
 const sloganText = document.querySelectorAll('.animate-slide');
 const dividerLine = document.querySelector('.divider-line');
 
-const sectionTitles = document.querySelectorAll('.section-title');
 const contentContainers = document.querySelectorAll('.content__container');
 
 // Toggle navigation
@@ -49,33 +48,31 @@ const slideDown = () => {
 }
 
 // Elements that slide in when scroll reaches them
-const slideInElements = () => {
-	// Web page size
-	const windowHeight = window.innerHeight;
+const slideinContainers = () => {
 
-	sectionTitles.forEach(title => {
-		const titleTop = title.getBoundingClientRect().top;
-		// console.log('title', titleTop);
+	// Page height divided to get a section of when the elements should slide in
+	const pageHeight = window.innerHeight / 1.5;
 
+	// For each container do the below
+	contentContainers.forEach(container => {
+		const containerTop = container.getBoundingClientRect().top;
+		const containerHeight = container.getBoundingClientRect().height;
 
-		contentContainers.forEach(container => {
-			const containerTop = container.getBoundingClientRect().top;
-			const containerHeight = container.getBoundingClientRect().height;
-			console.log('height', containerHeight);
-			console.log('top', containerTop);
-			// If window height becomes bigger than sections top position, show the section content
-			// if (containerTop < containerTop + containerHeight) {
-			// 	container.classList.remove('slide-up');
-			// } else {
-			// 	container.classList.add('slide-up');
-			// }
-		})
-	})
+		// We need to include the transofrm TranslateY of the content container
+		const containerPos = containerTop - (containerHeight);
+
+		// If container position becomes smaller than portion of the page height then slide element up
+		if (pageHeight > containerPos) {
+			container.classList.remove('slide-up');
+		} else {
+			container.classList.add('slide-up');
+		}
+	});
 
 }
 
 // Event listeners
-window.addEventListener('scroll', slideInElements);
+window.addEventListener('scroll', slideinContainers);
 burger.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 
