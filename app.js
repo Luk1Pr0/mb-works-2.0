@@ -50,36 +50,20 @@ const slideDown = () => {
 
 // Elements that slide in when scroll reaches them
 const slideInElements = () => {
-	// const containerOffsetTop = contentContainers[0].getBoundingClientRect().top;
-	// const containerHeight = contentContainers[0].getBoundingClientRect().height;
-	// const slideInPos = containerOffsetTop - (containerHeight * 3.5);
 
-	if (slideInPos < window.pageYOffset) {
-		contentContainers[0].classList.remove('slide-up')
-	} else {
-		contentContainers[0].classList.add('slide-up')
-	}
-
-	const containerTop = contentContainers[1].getBoundingClientRect().top;
-	const containerBot = contentContainers[1].getBoundingClientRect().bottom;
-	// const slideInPos = 
-
-	console.log('top', containerTop);
-	console.log('bottom', containerBot);
-
+	// Get page height 
+	const pageHeight = window.innerHeight;
 
 	contentContainers.forEach((container, i) => {
-		// const containerTop = container.getBoundingClientRect().top;
-		// const containerHeight = container.getBoundingClientRect().height;
+		// Get each containers top offset
+		const sectionTop = container.getBoundingClientRect().top;
 
-		// console.log('top', containerTop);
-		// console.log('height', containerHeight);
-
-		// if (slideInPos < window.pageYOffset) {
-		// 	container.classList.remove('slide-up');
-		// } else {
-		// 	container.classList.add('slide-up');
-		// }
+		// If page height becomes bigger than section top offset then show container
+		if ((pageHeight / 4) > (sectionTop / 2.5)) {
+			container.classList.remove('slide-up');
+		} else {
+			container.classList.add('slide-up');
+		}
 	})
 }
 
