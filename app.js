@@ -13,6 +13,7 @@ const formStatus = document.getElementById('formStatus');
 
 const galleryImages = document.querySelectorAll('.gallery-img');
 const imgModal = document.querySelector('.img-modal__container');
+const closeModalBtn = document.querySelector('.btn--close-modal');
 
 // Toggle navigation
 const toggleNav = () => {
@@ -75,10 +76,19 @@ const slideinContainers = () => {
 	});
 }
 
+// Show image modal along with the image
 const showModal = (e) => {
-	console.log(e.target.src);
-	console.log(imgModal.children[0].src = e.target.src);
+	// Add the src and alt attributes to the modal image to be shown
+	imgModal.children[0].src = e.target.src;
+	imgModal.children[0].alt = e.target.alt;
+
+	// Remove hidden class from the modal
 	imgModal.classList.remove('hidden');
+}
+
+// Close the image modal on button click
+const closeModal = () => {
+	imgModal.classList.add('hidden');
 }
 
 // Form submission @Formspreee
@@ -109,6 +119,7 @@ window.addEventListener('scroll', slideinContainers);
 burger.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 galleryImages.forEach((img, i) => img.addEventListener('click', showModal));
+closeModalBtn.addEventListener('click', closeModal);
 contactForm.addEventListener('submit', handleSubmit);
 
 // On load
