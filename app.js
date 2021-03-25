@@ -85,7 +85,7 @@ const handleSubmit = async (e) => {
 			'Accept': 'application/json'
 		}
 	}).then(resp => {
-		formStatus.textContent = 'Succesfully sent. We will be in touch within 24 hours';
+		formStatus.textContent = 'Your message has been sent. We will be in touch within 24 hours!';
 		formStatus.classList.add('text--success');
 		formStatus.classList.remove('hidden');
 		contactForm.reset();

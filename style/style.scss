@@ -759,6 +759,12 @@ textarea {
 		color: crimson;
 		border: 1px solid crimson;
 	}
+
+	@media screen and (max-width: $mobileBreak) {
+		text-align: center;
+		margin: 0;
+		margin-top: 1rem;
+	}
 }
 
 // Footer styling
