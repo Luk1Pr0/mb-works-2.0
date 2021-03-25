@@ -7,7 +7,8 @@ const burger = document.getElementById('burger');
 const sloganText = document.querySelectorAll('.animate-slide');
 const dividerLine = document.querySelector('.divider-line');
 
-const sectionTitles = document.querySelectorAll('.section-title');
+// const sectionTitles = document.querySelectorAll('.section-title');
+const sections = document.querySelectorAll('.section');
 const contentContainers = document.querySelectorAll('.content__container');
 
 // Toggle navigation
@@ -50,21 +51,22 @@ const slideDown = () => {
 
 // Elements that slide in when scroll reaches them
 const slideInElements = () => {
+	const pageHeight = window.innerHeight / 1.5;
 
-	// Get page height 
-	const pageHeight = window.innerHeight;
+	contentContainers.forEach(container => {
+		const containerTop = container.getBoundingClientRect().top;
+		const containerHeight = container.getBoundingClientRect().height;
+		// We need to include the transofrm TranslateY of the content container
+		const containerPos = containerTop - (containerHeight);
 
-	contentContainers.forEach((container, i) => {
-		// Get each containers top offset
-		const sectionTop = container.getBoundingClientRect().top;
-
-		// If page height becomes bigger than section top offset then show container
-		if ((pageHeight / 4) > (sectionTop / 2.5)) {
+		if (pageHeight > containerPos) {
 			container.classList.remove('slide-up');
 		} else {
 			container.classList.add('slide-up');
 		}
+
 	})
+
 }
 
 // Event listeners
