@@ -58,7 +58,6 @@ const slideinContainers = () => {
 
 	// Page height divided to get a section of when the elements should slide in
 	const pageHeight = window.innerHeight / 1.2;
-	console.log(pageHeight);
 
 	// For each container do the below
 	contentContainers.forEach(container => {
