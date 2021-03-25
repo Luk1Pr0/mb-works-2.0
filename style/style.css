@@ -1007,6 +1007,21 @@ textarea:focus {
   }
 }
 
+.text {
+  margin: 3rem;
+  padding: 1rem 2rem;
+}
+
+.text--success {
+  color: limegreen;
+  border: 1px solid limegreen;
+}
+
+.text--fail {
+  color: crimson;
+  border: 1px solid crimson;
+}
+
 footer {
   width: 100%;
   height: auto;
@@ -1090,5 +1105,9 @@ footer {
 
 .link:hover::after {
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

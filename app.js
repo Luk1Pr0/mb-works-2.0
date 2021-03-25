@@ -8,6 +8,8 @@ const sloganText = document.querySelectorAll('.animate-slide');
 const dividerLine = document.querySelector('.divider-line');
 
 const contentContainers = document.querySelectorAll('.content__container');
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById('formStatus');
 
 // Toggle navigation
 const toggleNav = () => {
@@ -71,10 +73,34 @@ const slideinContainers = () => {
 
 }
 
+// Form submission @Formspreee
+const handleSubmit = async (e) => {
+	e.preventDefault();
+	const data = new FormData(e.target);
+
+	fetch(e.target.action, {
+		method: 'post',
+		body: data,
+		headers: {
+			'Accept': 'application/json'
+		}
+	}).then(resp => {
+		formStatus.textContent = 'Succesfully sent. We will be in touch within 24 hours';
+		formStatus.classList.add('text--success');
+		formStatus.classList.remove('hidden');
+		contactForm.reset();
+	}).catch(err => {
+		formStatus.textContent = 'Could not send your message, please try again';
+		formStatus.classList.add('form--fail');
+		formStatus.classList.remove('hidden');
+	})
+}
+
 // Event listeners
 window.addEventListener('scroll', slideinContainers);
 burger.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
+contactForm.addEventListener('submit', handleSubmit);
 
 // On load
 setTimeout(slideDown, 400);
