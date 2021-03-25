@@ -67,7 +67,6 @@ const slideinContainers = () => {
 		} else {
 			container.classList.add('slide-up');
 		}
-
 	});
 
 }
