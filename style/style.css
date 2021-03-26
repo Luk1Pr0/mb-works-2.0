@@ -528,6 +528,22 @@ nav ul li a:hover {
           align-items: center;
 }
 
+.content__container--other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .slide-up {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -545,6 +561,40 @@ nav ul li a:hover {
     text-align: center;
     width: 100%;
   }
+}
+
+.progress-img__container {
+  background: rgba(0, 0, 0, 0.3);
+  width: 60vw;
+  height: 60vh;
+  margin-top: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.img__container {
+  border: 2px solid red;
+  height: 100%;
+  width: 30vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider-line {
+  width: 10px;
+  height: 100%;
+  background: white;
 }
 
 .service-cards__container {

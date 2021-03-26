@@ -410,6 +410,10 @@ nav ul li a {
 	&--4 {
 		@include flex(column);
 	}
+
+	&--other {
+		@include flex(column, center, center);
+	}
 }
 
 .slide-up {
@@ -426,6 +430,29 @@ nav ul li a {
 		text-align: center;
 		width: 100%;
 	}
+}
+
+// Before and after image styling
+.progress-img__container {
+	background: $shadow;
+	width: 60vw;
+	height: 60vh;
+	margin-top: $bodyPadding;
+
+	@include flex();
+}
+
+.img__container {
+	border: 2px solid red;
+	height: 100%;
+	width: 30vw;
+	object-fit: cover;
+}
+
+.slider-line {
+	width: 10px;
+	height: 100%;
+	background: white;
 }
 
 // Service cards container
