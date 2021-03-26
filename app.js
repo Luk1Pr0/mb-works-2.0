@@ -58,6 +58,7 @@ const slideinContainers = () => {
 
 	// Page height divided to get a section of when the elements should slide in
 	const pageHeight = window.innerHeight / 1.2;
+	console.log('pageHeight', pageHeight);
 
 	// For each container do the below
 	contentContainers.forEach(container => {
@@ -70,8 +71,6 @@ const slideinContainers = () => {
 		// If container position becomes smaller than portion of the page height then slide element up
 		if (pageHeight > containerPos) {
 			container.classList.remove('slide-up');
-		} else {
-			container.classList.add('slide-up');
 		}
 	});
 }
