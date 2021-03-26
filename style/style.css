@@ -566,35 +566,75 @@ nav ul li a:hover {
 .progress-img__container {
   background: rgba(0, 0, 0, 0.3);
   width: 60vw;
-  height: 60vh;
+  height: 70vh;
   margin-top: 8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 1280px) {
+  .progress-img__container {
+    width: 90vw;
+    height: 50vh;
+  }
 }
 
 .img__container {
-  border: 2px solid red;
   height: 100%;
   width: 30vw;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+}
+
+.img__container--before {
+  z-index: 2;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1280px) {
+  .img__container {
+    width: 45vw;
+  }
 }
 
 .slider-line {
-  width: 10px;
+  width: 2px;
   height: 100%;
   background: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: traslateX(-50%);
+          transform: traslateX(-50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.before-img {
+  width: 60vw;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1280px) {
+  .before-img {
+    width: 90vw;
+  }
+}
+
+.after-img {
+  width: 60vw;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1280px) {
+  .after-img {
+    width: 90vw;
+  }
 }
 
 .service-cards__container {

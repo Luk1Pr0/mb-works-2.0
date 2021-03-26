@@ -436,23 +436,63 @@ nav ul li a {
 .progress-img__container {
 	background: $shadow;
 	width: 60vw;
-	height: 60vh;
+	height: 70vh;
 	margin-top: $bodyPadding;
+	overflow: hidden;
+	position: relative;
 
-	@include flex();
+	@media screen and (max-width: $mobileBreak) {
+		width: 90vw;
+		height: 50vh;
+	}
 }
 
 .img__container {
-	border: 2px solid red;
 	height: 100%;
 	width: 30vw;
 	object-fit: cover;
+	position: absolute;
+
+	&--before {
+		z-index: 2;
+		overflow: hidden;
+	}
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 45vw;
+	}
 }
 
 .slider-line {
-	width: 10px;
+	width: 2px;
 	height: 100%;
 	background: white;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: traslateX(-50%);
+	z-index: 3;
+	pointer-events: none;
+}
+
+.before-img {
+	width: 60vw;
+	height: 100%;
+	object-fit: cover;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 90vw;
+	}
+}
+
+.after-img {
+	width: 60vw;
+	height: 100%;
+	object-fit: cover;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 90vw;
+	}
 }
 
 // Service cards container
