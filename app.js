@@ -19,12 +19,6 @@ const beforeAfterContainer = document.querySelector('.progress-img__container');
 const beforeImg = document.querySelector('.img__container--before');
 const sliderLine = document.querySelector('.slider-line');
 
-const resizeBeforeImg = (e) => {
-	let mousePos = e.layerX;
-	beforeImg.style.width = mousePos + 'px';
-	sliderLine.style.left = mousePos + 'px';
-}
-
 // Toggle navigation
 const toggleNav = () => {
 	// Toggle hidden class
@@ -97,6 +91,16 @@ const showModal = (e) => {
 // Close the image modal on button click
 const closeModal = () => {
 	imgModal.classList.add('hidden');
+}
+
+// Show before or after image on user mouse or touch move
+const resizeBeforeImg = (e) => {
+	// Get the mouse positon in relation to the before after container
+	let mousePos = e.layerX;
+
+	// Set the image container width and slider line position to the mouse position
+	beforeImg.style.width = mousePos + 'px';
+	sliderLine.style.left = mousePos + 'px';
 }
 
 // Form submission @Formspreee
