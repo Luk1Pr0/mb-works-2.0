@@ -15,6 +15,19 @@ const galleryImages = document.querySelectorAll('.gallery-img');
 const imgModal = document.querySelector('.img-modal__container');
 const closeModalBtn = document.querySelector('.btn--close-modal');
 
+const beforeAfterContainer = document.querySelector('.progress-img__container');
+const beforeImg = document.querySelector('.img__container--before');
+const sliderLine = document.querySelector('.slider-line');
+
+const resizeBeforeImg = (e) => {
+	let mousePos = e.layerX;
+	beforeImg.style.width = mousePos + 'px';
+	sliderLine.style.left = mousePos + 'px';
+}
+
+beforeAfterContainer.addEventListener('mousemove', resizeBeforeImg);
+beforeAfterContainer.addEventListener('touchmove', resizeBeforeImg);
+
 // Toggle navigation
 const toggleNav = () => {
 	// Toggle hidden class
@@ -58,7 +71,6 @@ const slideinContainers = () => {
 
 	// Page height divided to get a section of when the elements should slide in
 	const pageHeight = window.innerHeight / 1.2;
-	console.log('pageHeight', pageHeight);
 
 	// For each container do the below
 	contentContainers.forEach(container => {

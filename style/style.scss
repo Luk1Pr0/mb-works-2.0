@@ -410,6 +410,10 @@ nav ul li a {
 	&--4 {
 		@include flex(column);
 	}
+
+	&--other {
+		@include flex(column, center, center);
+	}
 }
 
 .slide-up {
@@ -425,6 +429,69 @@ nav ul li a {
 	@media screen and (max-width: $mobileBreak) {
 		text-align: center;
 		width: 100%;
+	}
+}
+
+// Before and after image styling
+.progress-img__container {
+	background: $shadow;
+	width: 60vw;
+	height: 70vh;
+	margin-top: $bodyPadding;
+	overflow: hidden;
+	position: relative;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 90vw;
+		height: 50vh;
+	}
+}
+
+.img__container {
+	height: 100%;
+	width: 30vw;
+	object-fit: cover;
+	position: absolute;
+
+	&--before {
+		z-index: 2;
+		overflow: hidden;
+	}
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 45vw;
+	}
+}
+
+.slider-line {
+	width: 2px;
+	height: 100%;
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: traslateX(-50%);
+	z-index: 3;
+	pointer-events: none;
+}
+
+.before-img {
+	width: 60vw;
+	height: 100%;
+	object-fit: cover;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 90vw;
+	}
+}
+
+.after-img {
+	width: 60vw;
+	height: 100%;
+	object-fit: cover;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 90vw;
 	}
 }
 
