@@ -487,8 +487,8 @@ nav ul li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
@@ -923,7 +923,6 @@ nav ul li a:hover {
 
 .form__container {
   width: 50%;
-  margin-top: 2rem;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1066,8 +1065,20 @@ textarea:focus {
   }
 }
 
-.text {
+.form-status__container {
+  width: 50%;
   margin: 3rem;
+}
+
+@media screen and (max-width: 1280px) {
+  .form-status__container {
+    width: 100%;
+  }
+}
+
+.text {
+  width: 100%;
+  text-align: center;
   padding: 1rem 2rem;
 }
 
@@ -1092,7 +1103,7 @@ textarea:focus {
 footer {
   width: 100%;
   height: auto;
-  background: rgba(19, 19, 19, 0.9);
+  background: #383638;
   padding: 2rem 8rem;
 }
 

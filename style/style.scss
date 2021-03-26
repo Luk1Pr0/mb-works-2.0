@@ -398,7 +398,7 @@ nav ul li a {
 	font-size: 1.2rem;
 	width: 100%;
 	@include flex();
-	transition: all $transitionMedium;
+	transition: all $transitionLong;
 	transform: translateY(0);
 	opacity: 1;
 
@@ -703,7 +703,6 @@ nav ul li a {
 // Form section
 .form__container {
 	width: 50%;
-	margin-top: 2rem;
 
 	@media screen and (max-width: $mobileBreak) {
 		width: 100%;
@@ -800,8 +799,18 @@ textarea {
 	}
 }
 
-.text {
+.form-status__container {
+	width: 50%;
 	margin: 3rem;
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 100%;
+	}
+}
+
+.text {
+	width: 100%;
+	text-align: center;
 
 	padding: 1rem 2rem;
 	&--success {
@@ -825,7 +834,7 @@ textarea {
 footer {
 	width: 100%;
 	height: auto;
-	background: rgba($primaryBackground, 0.9);
+	background: rgb(56, 54, 56);
 	padding: 2rem $bodyPadding;
 
 	@media screen and (max-width: $mobileBreak) {

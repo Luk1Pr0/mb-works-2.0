@@ -40,7 +40,7 @@ const stretch = () => {
 	dividerLine.classList.add('animate-stretch');
 }
 
-// Slide elements
+// Slide in slogan text
 const slideRight = () => {
 	sloganText.forEach((text, i) => {
 		text.style.transitionDelay = `${i / 2}s`
