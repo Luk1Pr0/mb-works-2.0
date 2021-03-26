@@ -25,9 +25,6 @@ const resizeBeforeImg = (e) => {
 	sliderLine.style.left = mousePos + 'px';
 }
 
-beforeAfterContainer.addEventListener('mousemove', resizeBeforeImg);
-beforeAfterContainer.addEventListener('touchmove', resizeBeforeImg);
-
 // Toggle navigation
 const toggleNav = () => {
 	// Toggle hidden class
@@ -133,7 +130,16 @@ galleryImages.forEach((img, i) => img.addEventListener('click', showModal));
 closeModalBtn.addEventListener('click', closeModal);
 contactForm.addEventListener('submit', handleSubmit);
 
+// Check page name and add event listener to elements if necessary
+const checkPageName = () => {
+	if (window.location.pathname.includes('other')) {
+		beforeAfterContainer.addEventListener('mousemove', resizeBeforeImg);
+		beforeAfterContainer.addEventListener('touchmove', resizeBeforeImg);
+	}
+}
+
 // On load
+checkPageName();
 setTimeout(slideDown, 400);
 setTimeout(stretch, 400);
 setTimeout(slideRight, 1000);
