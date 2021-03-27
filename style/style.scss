@@ -42,7 +42,7 @@ html {
 	scroll-behavior: smooth;
 
 	@media screen and (max-width: $mobileBreak) {
-		font-smooth: 10px;
+		font-smooth: 8px;
 	}
 }
 
@@ -167,7 +167,25 @@ p {
 	}
 
 	.line:last-child {
-		transform: translate(0, -0.9rem) rotate(-45deg);		
+		transform: translate(0, -0.9rem) rotate(-45deg);
+	}
+
+	@media screen and (max-width: $mobileBreak) {
+		.line:first-child {
+			transform: translate(0, 0.5rem) rotate(45deg);
+		}
+	
+		.line:nth-child(2) {
+			opacity: 0;
+		}
+	
+		&:hover .line:nth-child(2){
+			opacity: 1;
+		}
+	
+		.line:last-child {
+			transform: translate(0, -0.4rem) rotate(-45deg);
+		}
 	}
 }
 

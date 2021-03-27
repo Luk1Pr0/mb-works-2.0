@@ -19,6 +19,8 @@ const beforeAfterContainer = document.querySelector('.progress-img__container');
 const beforeImg = document.querySelector('.img__container--before');
 const sliderLine = document.querySelector('.slider-line');
 
+const mobileScreen = 1280;
+
 // Toggle navigation
 const toggleNav = () => {
 	// Toggle hidden class
@@ -32,7 +34,10 @@ const toggleNav = () => {
 		document.body.style.overflowY = 'hidden';
 
 		// Add margin as the width of the scrollbar
-		burger.style.marginRight = '10px';
+		if (window.innerWidth > mobileScreen) {
+			burger.style.marginRight = '10px';
+		}
+		
 	} else {
 		document.body.style.overflowY = 'auto';
 		burger.style.marginRight = '0px';

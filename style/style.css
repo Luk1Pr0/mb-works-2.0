@@ -13,7 +13,7 @@ html {
 
 @media screen and (max-width: 1280px) {
   html {
-    font-smooth: 10px;
+    font-smooth: 8px;
   }
 }
 
@@ -180,6 +180,23 @@ p {
 .burger--cross .line:last-child {
   -webkit-transform: translate(0, -0.9rem) rotate(-45deg);
           transform: translate(0, -0.9rem) rotate(-45deg);
+}
+
+@media screen and (max-width: 1280px) {
+  .burger--cross .line:first-child {
+    -webkit-transform: translate(0, 0.5rem) rotate(45deg);
+            transform: translate(0, 0.5rem) rotate(45deg);
+  }
+  .burger--cross .line:nth-child(2) {
+    opacity: 0;
+  }
+  .burger--cross:hover .line:nth-child(2) {
+    opacity: 1;
+  }
+  .burger--cross .line:last-child {
+    -webkit-transform: translate(0, -0.4rem) rotate(-45deg);
+            transform: translate(0, -0.4rem) rotate(-45deg);
+  }
 }
 
 .line {
