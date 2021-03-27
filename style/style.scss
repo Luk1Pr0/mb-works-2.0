@@ -63,6 +63,7 @@ a {
 p {
 	color: $primaryColor;
 }
+
 // Scroll bar styling
 ::-webkit-scrollbar {
 	width: 10px;
@@ -81,6 +82,10 @@ p {
 	z-index: 10;
 	transform: translateY(-100%);
 	transition: transform $transitionLong;
+
+	@media screen and (max-width: $mobileBreak) {
+		height: 4rem;
+	}
 }
 
 // Show nav with javascript
@@ -106,8 +111,8 @@ p {
 	object-fit: cover;
 
 	@media screen and (max-width: $mobileBreak) {
-		width: 4rem;
-		height: 4rem;
+		width: 3rem;
+		height: 3rem;
 	}
 }
 
@@ -124,6 +129,8 @@ p {
 
 	@media screen and (max-width: $mobileBreak) {
 		right: $mobilePadding;
+		width: 2rem;
+		height: 1rem;
 	}
 
 	&:hover .line:first-child {
@@ -160,7 +167,7 @@ p {
 	}
 
 	.line:last-child {
-		transform: translate(0, -0.9rem) rotate(-45deg);
+		transform: translate(0, -0.9rem) rotate(-45deg);		
 	}
 }
 
@@ -304,14 +311,14 @@ nav ul li a {
 }
 
 .slogan-text {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	line-height: 200%;
 	margin-left: 1rem;
 	color: $primaryColor;
 	font-weight: 300;
 
 	@media screen and (max-width: $mobileBreak) {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 }
 
@@ -343,10 +350,10 @@ nav ul li a {
 
 // Logo text styling
 .logo-text {
-	font-size: 4rem;
+	font-size: 3rem;
 
 	@media screen and (max-width: $mobileBreak) {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 }
 

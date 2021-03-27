@@ -69,6 +69,12 @@ p {
   transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
+@media screen and (max-width: 1280px) {
+  .nav {
+    height: 4rem;
+  }
+}
+
 .nav--show {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -97,8 +103,8 @@ p {
 
 @media screen and (max-width: 1280px) {
   .nav-logo {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -129,6 +135,8 @@ p {
 @media screen and (max-width: 1280px) {
   .burger {
     right: 1rem;
+    width: 2rem;
+    height: 1rem;
   }
 }
 
@@ -377,7 +385,7 @@ nav ul li a:hover {
 }
 
 .slogan-text {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 200%;
   margin-left: 1rem;
   color: #f0f0f0;
@@ -386,7 +394,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 1280px) {
   .slogan-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -416,12 +424,12 @@ nav ul li a:hover {
 }
 
 .logo-text {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 @media screen and (max-width: 1280px) {
   .logo-text {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
