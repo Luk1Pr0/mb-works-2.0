@@ -132,14 +132,6 @@ p {
   z-index: 10;
 }
 
-@media screen and (max-width: 1280px) {
-  .burger {
-    right: 1rem;
-    width: 2rem;
-    height: 1rem;
-  }
-}
-
 .burger:hover .line:first-child {
   -webkit-transform: translate(15px);
           transform: translate(15px);
@@ -162,6 +154,30 @@ p {
   transition: 0.1s all ease;
   -webkit-transform: translate(30px);
           transform: translate(30px);
+}
+
+@media screen and (max-width: 1280px) {
+  .burger {
+    right: 1rem;
+    width: 2rem;
+    height: 1rem;
+  }
+  .burger:hover .line:first-child {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .burger:hover .line:last-child {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .burger:active .line:first-child {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .burger:active .line:last-child {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .burger--cross .line:first-child {
@@ -343,7 +359,7 @@ nav ul li a:hover {
           align-items: flex-end;
   background: url(../assets/patio-shed.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   position: relative;
 }
 

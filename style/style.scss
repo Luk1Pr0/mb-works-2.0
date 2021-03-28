@@ -127,12 +127,6 @@ p {
 	right: $bodyPadding;
 	z-index: 10;
 
-	@media screen and (max-width: $mobileBreak) {
-		right: $mobilePadding;
-		width: 2rem;
-		height: 1rem;
-	}
-
 	&:hover .line:first-child {
 		transform: translate(15px);
 	}
@@ -149,6 +143,28 @@ p {
 	&:active .line:last-child {
 		transition: 0.1s all ease;
 		transform: translate(30px);
+	}
+
+	@media screen and (max-width: $mobileBreak) {
+		right: $mobilePadding;
+		width: 2rem;
+		height: 1rem;
+
+		&:hover .line:first-child {
+			transform: none;
+		}
+	
+		&:hover .line:last-child {
+			transform: none;
+		}
+	
+		&:active .line:first-child {
+			transform: none;
+		}
+	
+		&:active .line:last-child {
+			transform: none;
+		}
 	}
 }
 
@@ -278,7 +294,7 @@ nav ul li a {
 	@include flex(row, flex-start, flex-end);
 	background: url(../assets/patio-shed.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: top;
 	position: relative;
 
 	@media screen and (max-width: $mobileBreak) {
