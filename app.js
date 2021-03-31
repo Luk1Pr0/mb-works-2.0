@@ -37,7 +37,7 @@ const toggleNav = () => {
 		if (window.innerWidth > mobileScreen) {
 			burger.style.marginRight = '10px';
 		}
-		
+
 	} else {
 		document.body.style.overflowY = 'auto';
 		burger.style.marginRight = '0px';
@@ -74,7 +74,7 @@ const slideinContainers = () => {
 		const containerHeight = container.getBoundingClientRect().height;
 
 		// We need to include the transofrm TranslateY of the content container
-		const containerPos = containerTop - (containerHeight);
+		const containerPos = containerTop - containerHeight;
 
 		// If container position becomes smaller than portion of the page height then slide element up
 		if (pageHeight > containerPos) {
