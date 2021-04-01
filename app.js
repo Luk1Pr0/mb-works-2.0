@@ -141,7 +141,8 @@ contactForm.addEventListener('submit', handleSubmit);
 
 // Check page name and add event listener to elements if necessary
 const checkPageName = () => {
-	if (window.location.pathname.includes('other')) {
+	const page = window.location.pathname;
+	if (page.includes('other') || page.includes('patio')) {
 		beforeAfterContainer.addEventListener('mousemove', resizeBeforeImg);
 		beforeAfterContainer.addEventListener('touchmove', resizeBeforeImg);
 	}

@@ -5,7 +5,7 @@
 $bodyBackground: linear-gradient(4deg, rgb(15, 15, 15) 0%, rgb(71, 71, 71) 100%);
 $primaryBackground: rgb(19, 19, 19);
 $secondaryBackground: rgb(31, 31, 31);
-$overlayBackground: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+$overlayBackground: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 $primaryColor: rgb(240, 240, 240);
 $secondaryColor: rgb(217, 255, 0);
 $hiddenText: rgba(240, 240, 240, 0.2);
@@ -40,10 +40,6 @@ $mobileBreak: 1280px;
 html {
 	font-size: 16px;
 	scroll-behavior: smooth;
-
-	@media screen and (max-width: $mobileBreak) {
-		font-size: 8px;
-	}
 }
 
 body {
@@ -292,7 +288,7 @@ nav ul li a {
 	width: 100%;
 	height: 90vh;
 	@include flex(row, flex-start, flex-end);
-	background: url(../assets/background-home.JPEG);
+	background: url(../assets/background-index.JPEG);
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -438,7 +434,7 @@ nav ul li a {
 .content__container {
 	font-size: 1.2rem;
 	width: 100%;
-	@include flex();
+	@include flex(column, center, center);
 	transition: all $transitionLong;
 	transform: translateY(0);
 	opacity: 1;
@@ -450,10 +446,6 @@ nav ul li a {
 
 	&--4 {
 		@include flex(column);
-	}
-
-	&--other {
-		@include flex(column, center, center);
 	}
 }
 
@@ -476,8 +468,8 @@ nav ul li a {
 // Before and after image styling
 .progress-img__container {
 	background: $shadow;
-	width: 60vw;
-	height: 70vh;
+	width: 70vw;
+	height: 80vh;
 	margin-top: $bodyPadding;
 	overflow: hidden;
 	position: relative;
@@ -490,7 +482,7 @@ nav ul li a {
 
 .img__container {
 	height: 100%;
-	width: 30vw;
+	width: 35vw;
 	object-fit: cover;
 	position: absolute;
 
@@ -517,7 +509,7 @@ nav ul li a {
 }
 
 .before-img {
-	width: 60vw;
+	width: 70vw;
 	height: 100%;
 	object-fit: cover;
 
@@ -527,7 +519,7 @@ nav ul li a {
 }
 
 .after-img {
-	width: 60vw;
+	width: 70vw;
 	height: 100%;
 	object-fit: cover;
 

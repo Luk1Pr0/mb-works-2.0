@@ -11,12 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 1280px) {
-  html {
-    font-size: 8px;
-  }
-}
-
 body {
   width: 100%;
   min-height: 100vh;
@@ -357,7 +351,7 @@ nav ul li a:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background: url(../assets/background-home.JPEG);
+  background: url(../assets/background-index.JPEG);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -372,8 +366,8 @@ nav ul li a:hover {
 .dark-overlay {
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.7)));
-  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   position: absolute;
   top: 0;
   left: 0;
@@ -518,10 +512,10 @@ nav ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -569,22 +563,6 @@ nav ul li a:hover {
           align-items: center;
 }
 
-.content__container--other {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .slide-up {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -606,8 +584,8 @@ nav ul li a:hover {
 
 .progress-img__container {
   background: rgba(0, 0, 0, 0.3);
-  width: 60vw;
-  height: 70vh;
+  width: 70vw;
+  height: 80vh;
   margin-top: 8rem;
   overflow: hidden;
   position: relative;
@@ -622,7 +600,7 @@ nav ul li a:hover {
 
 .img__container {
   height: 100%;
-  width: 30vw;
+  width: 35vw;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
@@ -653,7 +631,7 @@ nav ul li a:hover {
 }
 
 .before-img {
-  width: 60vw;
+  width: 70vw;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -666,7 +644,7 @@ nav ul li a:hover {
 }
 
 .after-img {
-  width: 60vw;
+  width: 70vw;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
