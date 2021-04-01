@@ -13,7 +13,7 @@ html {
 
 @media screen and (max-width: 1280px) {
   html {
-    font-smooth: 8px;
+    font-size: 8px;
   }
 }
 
@@ -357,9 +357,9 @@ nav ul li a:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background: url(../assets/patio-shed.jpg);
+  background: url(../assets/background-home.JPEG);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   position: relative;
 }
 
