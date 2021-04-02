@@ -528,6 +528,19 @@ nav ul li a {
 	}
 }
 
+// Image container for a service page
+.page-img__container {
+	width: 70%;
+	height: 70vh;
+	margin-top: $bodyPadding;
+
+	&--img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
 // Service cards container
 .service-cards__container {
 	width: 100%;
