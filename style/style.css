@@ -1281,6 +1281,7 @@ footer {
 .link::after {
   content: '';
   position: absolute;
+  top: 110%;
   left: 0;
   bottom: 0;
   width: 0;
