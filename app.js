@@ -136,7 +136,6 @@ window.addEventListener('scroll', slideinContainers);
 burger.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 galleryImages.forEach((img, i) => img.addEventListener('click', showModal));
-closeModalBtn.addEventListener('click', closeModal);
 contactForm.addEventListener('submit', handleSubmit);
 
 // Check page name and add event listener to elements if necessary
@@ -145,6 +144,11 @@ const checkPageName = () => {
 	if (page.includes('kitchen') || page.includes('patio') || page.includes('other')) {
 		beforeAfterContainer.addEventListener('mousemove', resizeBeforeImg);
 		beforeAfterContainer.addEventListener('touchmove', resizeBeforeImg);
+	}
+
+	// Add event listener to modal close btn if page names match
+	if (page.includes('gallery') || page.includes('index')) {
+		closeModalBtn.addEventListener('click', closeModal);
 	}
 }
 
