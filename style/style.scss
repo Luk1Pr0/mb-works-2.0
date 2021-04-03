@@ -545,6 +545,7 @@ nav ul li a {
 .service-cards__container {
 	width: 100%;
 	height: auto;
+	margin-top: 2rem;
 	@include flex(row);
 
 	@media screen and (max-width: $mobileBreak) {
