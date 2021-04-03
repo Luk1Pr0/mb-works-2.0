@@ -5,7 +5,7 @@
 $bodyBackground: linear-gradient(4deg, rgb(15, 15, 15) 0%, rgb(71, 71, 71) 100%);
 $primaryBackground: rgb(19, 19, 19);
 $secondaryBackground: rgb(31, 31, 31);
-$overlayBackground: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+$overlayBackground: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 $primaryColor: rgb(240, 240, 240);
 $secondaryColor: rgb(217, 255, 0);
 $hiddenText: rgba(240, 240, 240, 0.2);
@@ -186,13 +186,13 @@ p {
 		.line:first-child {
 			transform: translate(0, 0.5rem) rotate(45deg);
 		}
-	
-		.line:nth-child(2) {
-			opacity: 0;
+
+		.line:first-child {
+			transform: translate(0, 0.5rem) rotate(45deg);
 		}
 	
-		&:hover .line:nth-child(2){
-			opacity: 1;
+		.line:nth-child(2){
+			opacity: 0;
 		}
 	
 		.line:last-child {
@@ -631,6 +631,7 @@ nav ul li a {
 	transform: scaleY(0);
 	opacity: 0;
 	transition: $transitionShort;
+	font-size: 1.1rem;
 
 	@media screen and (max-width: $mobileBreak) {
 		font-size: 1rem;

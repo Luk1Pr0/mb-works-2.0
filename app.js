@@ -31,6 +31,7 @@ const toggleNav = () => {
 
 	// If nav is shown then hide the scroll bar
 	if (!nav.className.includes('nav--hidden')) {
+
 		document.body.style.overflowY = 'hidden';
 
 		// Add margin as the width of the scrollbar
