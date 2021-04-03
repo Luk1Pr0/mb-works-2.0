@@ -586,7 +586,7 @@ nav ul li a:hover {
   background: rgba(0, 0, 0, 0.3);
   width: 70vw;
   height: 80vh;
-  margin-top: 8rem;
+  margin-top: 2rem;
   overflow: hidden;
   position: relative;
 }
@@ -659,7 +659,7 @@ nav ul li a:hover {
 .page-img__container {
   width: 70%;
   height: 70vh;
-  margin-top: 8rem;
+  margin-top: 2rem;
 }
 
 .page-img__container--img {
