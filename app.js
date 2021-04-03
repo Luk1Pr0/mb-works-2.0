@@ -91,11 +91,17 @@ const showModal = (e) => {
 
 	// Remove hidden class from the modal
 	imgModal.classList.remove('hidden');
+
+	// Only add event listener to the close modal btn when modal is open
+	closeModalBtn.addEventListener('click', closeModal);
 }
 
 // Close the image modal on button click
 const closeModal = () => {
 	imgModal.classList.add('hidden');
+
+	// Remove event listener when modal is closed
+	closeModalBtn.removeEventListener('click', closeModal);
 }
 
 // Show before or after image on user mouse or touch move
@@ -135,7 +141,7 @@ const handleSubmit = async (e) => {
 window.addEventListener('scroll', slideinContainers);
 burger.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
-galleryImages.forEach((img, i) => img.addEventListener('click', showModal));
+galleryImages.forEach(img => img.addEventListener('click', showModal));
 contactForm.addEventListener('submit', handleSubmit);
 
 // Check page name and add event listener to elements if necessary
@@ -144,11 +150,6 @@ const checkPageName = () => {
 	if (page.includes('kitchen') || page.includes('patio') || page.includes('other')) {
 		beforeAfterContainer.addEventListener('mousemove', resizeBeforeImg);
 		beforeAfterContainer.addEventListener('touchmove', resizeBeforeImg);
-	}
-
-	// Add event listener to modal close btn if page names match
-	if (page.includes('gallery') || page.includes('index')) {
-		closeModalBtn.addEventListener('click', closeModal);
 	}
 }
 
