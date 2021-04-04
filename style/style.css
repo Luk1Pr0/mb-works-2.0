@@ -364,6 +364,16 @@ nav ul li a:hover {
   }
 }
 
+.header--short {
+  height: 60vh;
+}
+
+@media screen and (max-width: 1rem) {
+  .header--short {
+    height: 60vh;
+  }
+}
+
 .dark-overlay {
   width: 100%;
   height: 100%;
@@ -801,7 +811,7 @@ nav ul li a:hover {
 
 .card-text {
   padding: 1rem;
-  padding-top: 0;
+  padding-top: 20%;
   text-align: center;
   position: absolute;
   top: 0;
