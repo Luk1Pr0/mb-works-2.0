@@ -115,7 +115,7 @@ const resizeBeforeImg = (e) => {
 	sliderLine.style.left = mousePos + 'px';
 }
 
-// Form submission @Formspreee
+// Form submission Formspreee
 const handleSubmit = async (e) => {
 	e.preventDefault();
 	const data = new FormData(e.target);
