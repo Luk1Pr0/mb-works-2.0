@@ -29,7 +29,7 @@ const toggleNav = () => {
 	// Change the burger lines to cross each other when nav is open
 	burger.classList.toggle('burger--cross');
 
-	// If nav is shown then hide the scroll bar
+	// // If nav is shown then hide the scroll bar
 	if (!nav.className.includes('nav--hidden')) {
 
 		document.body.style.overflowY = 'hidden';

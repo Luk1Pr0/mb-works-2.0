@@ -659,10 +659,10 @@ nav ul li a {
 	text-align: center;
 
 	&--form {
-		@include flex(row, space-around);
+		@include flex(row, space-between);
 
 		@media screen and (max-width: $mobileBreak) {
-			@include flex(row, space-between);
+			@include flex(column-reverse, space-between);
 		}
 	}
 }
@@ -708,19 +708,13 @@ nav ul li a {
 		font-size: 1.3rem;
 	}
 
-	&--success {
-		border: 1px solid lime;
-
-		&::after {
-			background: lime;
-		}
-	}
-
-	&--fail {
-		border: 1px solid crimson;
-
-		&::after {
-			background: crimson;
+	&--form {
+		margin: 1rem 0;
+		padding: 1rem 2.5rem;
+		@media screen and (max-width: $mobileBreak) {
+			width: 100%;
+			padding: 1.5rem 2rem;
+			font-size: 1.5rem;
 		}
 	}
 	
@@ -878,18 +872,24 @@ nav ul li a {
 		margin-right: 1rem;
 
 		@media screen and (max-width: $mobileBreak) {
-			width: 100%;
-			margin: 0;
+			margin: 1rem 0;
 		}
 	}
 
 	&--email {
 		width: 50%;
-
-		@media screen and (max-width: $mobileBreak) {
-			width: 100%;
-		}
 	}	
+
+	@media screen and (max-width: $mobileBreak) {
+		width: 100%;
+		margin: 3rem 0;
+	}
+
+	&:first-child {
+		@media screen and (max-width: $mobileBreak) {
+			margin: 0;
+		}
+	}
 }
 
 label {

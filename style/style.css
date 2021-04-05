@@ -861,8 +861,9 @@ nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -873,10 +874,10 @@ nav ul li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -933,20 +934,17 @@ nav ul li a:hover {
   font-size: 1.3rem;
 }
 
-.btn--success {
-  border: 1px solid lime;
+.btn--form {
+  margin: 1rem 0;
+  padding: 1rem 2.5rem;
 }
 
-.btn--success::after {
-  background: lime;
-}
-
-.btn--fail {
-  border: 1px solid crimson;
-}
-
-.btn--fail::after {
-  background: crimson;
+@media screen and (max-width: 1280px) {
+  .btn--form {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -1165,8 +1163,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 1280px) {
   .input__container--name {
-    width: 100%;
-    margin: 0;
+    margin: 1rem 0;
   }
 }
 
@@ -1175,8 +1172,15 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 1280px) {
-  .input__container--email {
+  .input__container {
     width: 100%;
+    margin: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .input__container:first-child {
+    margin: 0;
   }
 }
 
