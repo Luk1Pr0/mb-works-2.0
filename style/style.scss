@@ -146,11 +146,19 @@ p {
 		width: 2rem;
 		height: 1rem;
 
-		&:hover .line {
+		&:hover .line:first-child {
 			transform: none;
 		}
 	
-		&:active .line {
+		&:hover .line:last-child {
+			transform: none;
+		}
+	
+		&:active .line:first-child {
+			transform: none;
+		}
+	
+		&:active .line:last-child {
 			transform: none;
 		}
 	}

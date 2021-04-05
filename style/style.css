@@ -156,11 +156,19 @@ p {
     width: 2rem;
     height: 1rem;
   }
-  .burger:hover .line {
+  .burger:hover .line:first-child {
     -webkit-transform: none;
             transform: none;
   }
-  .burger:active .line {
+  .burger:hover .line:last-child {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .burger:active .line:first-child {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .burger:active .line:last-child {
     -webkit-transform: none;
             transform: none;
   }
