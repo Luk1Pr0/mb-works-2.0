@@ -143,7 +143,6 @@ window.addEventListener('scroll', slideinContainers);
 burger.addEventListener('click', toggleNav);
 navLinks.forEach(link => link.addEventListener('click', toggleNav));
 galleryImages.forEach(img => img.addEventListener('click', showModal));
-contactForm.addEventListener('submit', handleSubmit);
 
 // Check page name and add event listener to elements if necessary
 const checkPageName = () => {
@@ -151,6 +150,9 @@ const checkPageName = () => {
 	if (page.includes('kitchen') || page.includes('patio') || page.includes('other')) {
 		beforeAfterContainer.addEventListener('mousemove', resizeBeforeImg);
 		beforeAfterContainer.addEventListener('touchmove', resizeBeforeImg);
+	}
+	if (!page.includes('sitemap')) {
+		contactForm.addEventListener('submit', handleSubmit);
 	}
 }
 
