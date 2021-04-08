@@ -1344,13 +1344,14 @@ footer {
   bottom: 0;
   width: 0;
   height: 1px;
+  width: 100%;
   -webkit-transition: width 0.2s ease;
   transition: width 0.2s ease;
   background: #d9ff00;
 }
 
 .link:hover::after {
-  width: 100%;
+  width: 0;
 }
 
 .hidden {

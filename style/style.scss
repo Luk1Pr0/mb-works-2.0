@@ -1018,12 +1018,13 @@ footer {
 		bottom: 0;
 		width: 0;
 		height: 1px;
+		width: 100%;
 		transition: width $transitionShort;
 		background: $secondaryColor;
 	}
 
 	&:hover::after {
-		width: 100%;
+		width: 0;
 	}
 }
 
