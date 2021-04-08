@@ -1334,6 +1334,7 @@ footer {
 .link {
   position: relative;
   color: #d9ff00;
+  display: inline-block;
 }
 
 .link::after {

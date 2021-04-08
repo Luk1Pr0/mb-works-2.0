@@ -1009,6 +1009,7 @@ footer {
 .link {
 	position: relative;
 	color: $secondaryColor;
+	display: inline-block;
 
 	&::after {
 		content: '';
@@ -1026,6 +1027,7 @@ footer {
 	&:hover::after {
 		width: 0;
 	}
+
 }
 
 // Hidden class
