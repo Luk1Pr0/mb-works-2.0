@@ -970,6 +970,15 @@ textarea {
 	}
 }
 
+// Sitemap styling
+.sitemap-ul {
+	@include flex(column, center, flex-start);
+}
+
+.lpage {
+	margin: 1rem;
+}
+
 // Footer styling
 footer {
 	width: 100%;

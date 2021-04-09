@@ -130,6 +130,7 @@ const handleSubmit = async (e) => {
 		formStatus.textContent = 'Your message has been sent. We will be in touch within 24 hours!';
 		formStatus.classList.add('text--success');
 		formStatus.classList.remove('hidden');
+		formStatus.scrollIntoView();
 		contactForm.reset();
 	}).catch(err => {
 		formStatus.textContent = 'Could not send your message, please try again';
