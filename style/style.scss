@@ -105,7 +105,7 @@ p {
 	width: 6rem;
 	height: 6rem;
 	object-fit: cover;
-	filter: drop-shadow(0 0 10px rgba($secondaryColor, 0.1));
+	filter: drop-shadow(0 0 1px rgba($primaryColor, 0.2));
 
 	@media screen and (max-width: $mobileBreak) {
 		width: 3rem;

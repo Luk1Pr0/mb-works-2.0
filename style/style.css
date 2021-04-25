@@ -93,8 +93,8 @@ p {
   height: 6rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: drop-shadow(0 0 10px rgba(217, 255, 0, 0.1));
-          filter: drop-shadow(0 0 10px rgba(217, 255, 0, 0.1));
+  -webkit-filter: drop-shadow(0 0 1px rgba(240, 240, 240, 0.2));
+          filter: drop-shadow(0 0 1px rgba(240, 240, 240, 0.2));
 }
 
 @media screen and (max-width: 1280px) {
