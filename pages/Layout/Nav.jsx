@@ -17,7 +17,6 @@ export default function Nav() {
 
 	// Current route path
 	const currentRoute = useRouter().asPath;
-	console.log('🚀 ~ file: Nav.jsx:20 ~ Nav ~ currentRoute', currentRoute);
 
 	useEffect(() => {
 		setShowNav(false);
