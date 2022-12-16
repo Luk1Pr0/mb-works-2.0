@@ -1,0 +1,152 @@
+@use './variables.scss' as *;
+@use './mixin.scss' as *;
+
+// Class to highlight a specific text, ideally used on a <p> or <span> tag
+.active {
+	font-weight: 800;
+	color: $color-brand;
+}
+
+// Global class added to anchor tags
+.a {
+	text-decoration: none;
+	color: darken($color-brand, 7);
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover {
+		color: darken($color-brand, 0);
+
+		&::after {
+			transform: translate(-50%, 0);
+			opacity: 1;
+		}
+	}
+
+	// Add a dot underneath the anchors that will show on hover
+	&::after {
+		content: '';
+		position: absolute;
+		top: -8px;
+		left: 50%;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: $color-brand;
+		transform: translate(-50%, 0);
+		opacity: 0;
+		@include transition();
+	}
+}
+
+.font {
+	&-dark {
+		color: $color-dark;
+	}
+	&-light {
+		color: $color-light;
+	}
+}
+
+.text {
+	&-center {
+		text-align: center;
+	}
+
+	&-left {
+		text-align: left;
+	}
+
+	&-right {
+		text-align: right;
+	}
+}
+
+.h1 {
+	font-size: 5rem;
+	color: inherit;
+
+	@include phone() {
+		font-size: 3.5rem;
+	}
+}
+
+.h2 {
+	font-size: 5rem;
+	color: inherit;
+
+	@include phone() {
+		font-size: 3.5rem;
+	}
+}
+
+.h3 {
+	font-size: 3rem;
+	color: inherit;
+
+	@include phone() {
+		font-size: 2.5rem;
+	}
+}
+
+.h4 {
+	font-size: 2rem;
+	color: inherit;
+}
+
+.h5 {
+	font-size: 1.5rem;
+	color: inherit;
+}
+
+.h6 {
+	font-size: 1rem;
+	color: inherit;
+}
+
+.container {
+	width: 100%;
+
+	&-s {
+		width: 50%;
+
+		@include tablet() {
+			width: 100%;
+		}
+	}
+	&-m {
+		width: 75%;
+
+		@include tablet() {
+			width: 100%;
+		}
+	}
+	&-center {
+		display: flex;
+		justify-content: center;
+	}
+	&-left {
+		display: flex;
+		justify-content: flex-start;
+	}
+	&-right {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+// Project specific classes
+.logo {
+	&-part-1 {
+		color: $color-brand;
+		font-size: inherit;
+	}
+	&-part-2 {
+		color: $color-light;
+		font-size: inherit;
+		// text-shadow: 0.5px 0 $color-light, -0.5px 0 $color-light,
+		// 	0 0.5px $color-light, 0 -0.5px $color-light;
+	}
+}

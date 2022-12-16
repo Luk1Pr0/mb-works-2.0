@@ -1,0 +1,61 @@
+@use '../../sass/variables.scss' as *;
+@use '../../sass/mixin.scss' as *;
+
+.footer {
+	width: 100%;
+	min-height: 20vh;
+	position: relative;
+	left: 0;
+	bottom: 0;
+	background: $bg-default;
+	color: $color-light;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	padding: 2rem $space-l;
+	border-top: 2px solid $color-brand;
+
+	@include tablet() {
+		padding: 2rem $space-s;
+	}
+
+	@include phone() {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+}
+
+.column1 {
+	@include center();
+
+	@include phone() {
+		grid-column: auto;
+	}
+}
+
+.column2 {
+	@include center();
+	grid-column: 2;
+
+	@include phone() {
+		grid-column: auto;
+	}
+}
+
+.column3 {
+	@include center();
+
+	@include phone() {
+		grid-column: auto;
+	}
+}
+
+.socialLinks {
+	a {
+		margin-right: 15px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,175 @@
+@use '../../sass/variables.scss' as *;
+@use '../../sass/mixin.scss' as *;
+
+$aHeight: 6rem;
+
+.navBar {
+	min-height: $navHeight;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+	justify-content: space-between;
+	align-items: center;
+	background: transparent;
+	color: $color-light;
+	padding: 0 $space-l;
+	overflow: hidden;
+
+	@include tablet() {
+		height: $navHeightMobile;
+		padding: 0 $space-s;
+		grid-template-columns: 3fr 1fr;
+		z-index: 2;
+		overflow: initial;
+
+		// Add background to the navigation so that when the menu slides down or up, it is done behind the background color
+		&::after {
+			content: '';
+			background: $bg-default;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+		}
+	}
+}
+
+// Text inside the logo container of the navigation
+.logoText {
+	color: $color-light;
+	width: fit-content;
+}
+
+.burgerContainer {
+	// Hide the burger on desktop but display at anything below that
+	display: none;
+
+	@include tablet() {
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-self: flex-end;
+		justify-content: center;
+		cursor: pointer;
+
+		// Each div is a burger line
+		div {
+			background: $color-light;
+			width: 100%;
+			height: 2px;
+
+			@include transition();
+
+			// Add margin to the middle div so that the lines stand out
+			&:nth-child(2n) {
+				margin: 8px 0;
+			}
+		}
+
+		// When the burger menu is active then add this class
+		&Active {
+			div {
+				&:first-of-type {
+					transform: translate(0, 10px) rotate(45deg);
+				}
+				&:nth-child(2n) {
+					opacity: 0;
+				}
+				&:last-of-type {
+					transform: translate(0, -10px) rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+
+.ul {
+	list-style: none;
+	width: 100%;
+	height: $navHeight;
+	grid-column: 2;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	@include tablet() {
+		@include transition();
+
+		// Slide the navigation menu up to hide it from view
+		&Hidden {
+			// transform: translateY(-100%);
+			top: -$aHeight * 4;
+			// Don't allow the navigation menu to be clicked when it's supposed to be hidden
+			pointer-events: none;
+		}
+
+		width: 100%;
+		// Height of ul is duplicated by 4 so that first 4 links are displayed and no overflow is added until the 5th link is added
+		height: $aHeight * 4;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: -1;
+		grid-column: initial;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-end;
+		background: $bg-default;
+		padding: 0 2rem;
+		overflow: auto;
+	}
+}
+
+.li {
+	color: $color-light;
+	margin: 0 1rem;
+	font-weight: 100;
+
+	&:first-of-type {
+		margin-left: 0;
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	@include tablet() {
+		margin: 0;
+	}
+}
+
+.a {
+	// Darken the links if they are not actioned upon
+	color: darken($color-brand, 8);
+	font-weight: 500;
+
+	&:hover {
+		// On hover remove the darken
+		color: darken($color-brand, 0);
+	}
+
+	@include tablet() {
+		color: darken($color-brand, 22);
+		font-size: 3rem;
+		// Height of the links defined in variable as it's used to calculate the ul height
+		height: $aHeight;
+		@include center();
+
+		&:hover {
+			// On hover remove the darken
+			color: darken($color-brand, 0);
+		}
+	}
+}
+
+// When link is selected apply this class
+.active {
+	color: $color-brand;
+	font-weight: 800;
+}

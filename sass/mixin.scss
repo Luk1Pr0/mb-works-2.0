@@ -1,0 +1,31 @@
+@use './variables.scss' as *;
+
+@mixin phone() {
+	@media screen and (max-width: $mobile-screen) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media screen and (max-width: $tablet-screen) {
+		@content;
+	}
+}
+
+@mixin center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin transition() {
+	transition: 0.2s all ease;
+}
+
+@mixin bodyPadding() {
+	padding: $space-l / 1.2 $space-l;
+
+	@include tablet() {
+		padding: $space-m $space-s;
+	}
+}

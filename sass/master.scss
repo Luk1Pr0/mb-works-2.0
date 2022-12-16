@@ -1,0 +1,61 @@
+@use './utils.scss';
+@use './variables.scss' as *;
+@use './mixin.scss' as *;
+@use './font';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 1rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Gill Sans MT',
+		Calibri, 'Trebuchet MS', sans-serif;
+	color: inherit;
+	letter-spacing: 0.5px;
+	line-height: 160%;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+}
+
+span {
+	font-size: inherit;
+}
+
+// Children of the layout, elements between nav and footer
+#layout-children {
+	width: 100%;
+	min-height: 80vh;
+}
+
+header {
+	width: 100%;
+	min-height: fit-content;
+
+	@include bodyPadding();
+}
+
+section {
+	@include bodyPadding();
+
+	width: 100%;
+	min-height: fit-content;
+
+	& > * {
+		margin-bottom: $space-m;
+
+		&:last-child {
+			// Last child of all children of the section should have no margin
+			margin-bottom: 0;
+		}
+	}
+}

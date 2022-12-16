@@ -1,0 +1,67 @@
+@use './variables.scss' as *;
+@use './mixin.scss' as *;
+
+h1 {
+	font-size: 5rem;
+	font-weight: 800;
+	color: inherit;
+
+	line-height: 140%;
+
+	@include phone() {
+		font-size: 3.5rem;
+	}
+}
+
+h2 {
+	font-size: 5rem;
+	font-weight: 800;
+	color: inherit;
+
+	line-height: 140%;
+
+	@include phone() {
+		font-size: 3.5rem;
+	}
+}
+
+h3 {
+	font-size: 3rem;
+	font-weight: 800;
+	color: inherit;
+
+	line-height: 140%;
+
+	@include phone() {
+		font-size: 2.5rem;
+	}
+}
+
+h4 {
+	font-size: 2rem;
+	font-weight: 800;
+	color: inherit;
+
+	line-height: 140%;
+}
+
+h5 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: inherit;
+
+	line-height: 160%;
+}
+
+h6 {
+	font-size: 1rem;
+	font-weight: 700;
+	color: inherit;
+
+	line-height: 160%;
+}
+
+p {
+	font-size: 1rem;
+	color: inherit;
+}

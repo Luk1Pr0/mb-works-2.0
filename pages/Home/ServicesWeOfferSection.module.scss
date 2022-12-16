@@ -1,0 +1,66 @@
+@use '../../sass/variables.scss' as *;
+@use '../../sass/mixin.scss' as *;
+
+.section {
+	background: $bg-secondary;
+}
+
+.heading {
+	text-transform: uppercase;
+	color: $color-brand;
+	position: relative;
+	display: inline-block;
+	margin-bottom: $space-m;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		background: $color-brand;
+		opacity: 0.25;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+	}
+
+	&::before {
+		top: -10%;
+		left: 15%;
+	}
+
+	&::after {
+		width: 6rem;
+		height: 6rem;
+		top: 45%;
+		right: 25%;
+	}
+
+	@include tablet() {
+		top: 65%;
+		margin-bottom: $space-m;
+	}
+}
+
+.ul {
+	margin: $space-s 0;
+	list-style-position: inside;
+	font-size: inherit;
+}
+
+.li {
+	font-size: inherit;
+}
+
+.gridContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: $space-m;
+
+	@include tablet() {
+		grid-template-columns: 1fr;
+	}
+}
+
+.content {
+	font-size: 1.5rem;
+}
