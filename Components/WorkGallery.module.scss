@@ -1,0 +1,12 @@
+@use '../sass/variables.scss' as *;
+@use '../sass/mixin.scss' as *;
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+
+	@include phone() {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

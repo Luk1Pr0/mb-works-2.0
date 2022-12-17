@@ -1,13 +1,16 @@
 import '../sass/master.scss';
+import { RecoilRoot } from 'recoil';
 
 // Components
 import Layout from './Layout/Layout';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Layout>
-			<Component {...pageProps} />
-		</Layout>
+		<RecoilRoot>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</RecoilRoot>
 	);
 }
 
