@@ -2,7 +2,7 @@
 @use '../../sass/mixin.scss' as *;
 
 .section {
-	background: $bg-secondary;
+	background: $bg-default;
 }
 
 .heading {
@@ -39,28 +39,4 @@
 		top: 65%;
 		margin-bottom: $space-m;
 	}
-}
-
-.ul {
-	margin: $space-s 0;
-	list-style-position: inside;
-	font-size: inherit;
-}
-
-.li {
-	font-size: inherit;
-}
-
-.gridContainer {
-	display: grid;
-	grid-template-columns: 2fr 3fr;
-	gap: $space-m;
-
-	@include tablet() {
-		grid-template-columns: 1fr;
-	}
-}
-
-.content {
-	font-size: 1.5rem;
 }

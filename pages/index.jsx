@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Header from './Home/Header';
 import WhoAreWeSection from './Home/WhoAreWeSection';
 import ServiceWeOfferSection from './Home/ServicesWeOfferSection';
+import OurWorkSection from './Home/OurWorkSection';
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 				<Header />
 				<WhoAreWeSection />
 				<ServiceWeOfferSection />
+				<OurWorkSection />
 			</main>
 		</>
 	);

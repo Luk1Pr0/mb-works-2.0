@@ -52,10 +52,20 @@ export default function Nav() {
 					<Link
 						href={'/'}
 						className={`${styles.a} ${
-							currentRoute === '/' ? styles.active : null
+							currentRoute === '/' ? styles.active : ''
 						}`}
 					>
 						Home
+					</Link>
+				</li>
+				<li className={styles.li}>
+					<Link
+						href={'/#who-are-we'}
+						className={`${styles.a} ${
+							currentRoute === '/#who-are-we' ? styles.active : ''
+						}`}
+					>
+						Who are we
 					</Link>
 				</li>
 				<li className={styles.li}>
@@ -64,7 +74,7 @@ export default function Nav() {
 						className={`${styles.a} ${
 							currentRoute === '/#services-we-offer'
 								? styles.active
-								: null
+								: ''
 						}`}
 					>
 						Services
@@ -74,7 +84,7 @@ export default function Nav() {
 					<Link
 						href={'#our-work'}
 						className={`${styles.a} ${
-							currentRoute === '/#our-work' ? styles.active : null
+							currentRoute === '/#our-work' ? styles.active : ''
 						}`}
 					>
 						Our work
@@ -84,9 +94,7 @@ export default function Nav() {
 					<Link
 						href={'/contact-us'}
 						className={`${styles.a} ${
-							currentRoute === '/#contact-us'
-								? styles.active
-								: null
+							currentRoute === '/#contact-us' ? styles.active : ''
 						}`}
 					>
 						Contact us

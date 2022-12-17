@@ -1,0 +1,66 @@
+@use '../sass/variables.scss' as *;
+@use '../sass/mixin.scss' as *;
+
+.imgContainer {
+	width: 100%;
+	height: 30vh;
+	position: relative;
+	cursor: pointer;
+
+	&:hover {
+		.labelContainer {
+			pointer-events: none;
+			top: 40%;
+			opacity: 0.8;
+		}
+
+		&::before {
+			transform: translateY(80%);
+			opacity: 0.5;
+		}
+	}
+
+	// Add dark background cover for the image so that the label is visible
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $bg-default;
+		opacity: 0.9;
+		@include transition();
+	}
+
+	@include tablet() {
+		height: 100vh;
+	}
+
+	@include phone() {
+		height: 50vh;
+	}
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// Container for the label of the image
+.labelContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include transition();
+}
+
+.label {
+	@include transition();
+}
